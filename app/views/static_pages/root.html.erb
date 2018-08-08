@@ -1,11 +1,15 @@
 <main id="root">
 
+  <% if logged_in? %>
+    <script type="text/javascript">
+      window.currentUser = <%= render(
+        "api/users/user.json.jbuilder",
+        user: current_user
+      ).html_safe %>
+    </script>
+  <% end %>
+
   <h1 style='font-family:monospace'> Things are not working as expected! Bear with us!</h1>
 
-  <!-- <%= image_tag("dunk.gif", :alt => "luhmao") %>
-  <br>
-  <%= image_tag("highfive.gif", :alt => "luhmao") %>
-  <br> -->
-
+  <%= image_tag("klay_dunk.gif", :alt => "luhmao") %>
 </main>
-<%= image_tag("klay_dunk.gif", :alt => "luhmao") %>

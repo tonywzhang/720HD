@@ -37,19 +37,19 @@ class SessionForm extends React.Component {
 
   loginForm(){
     return (
+      <div className="form-container">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-        Log In to 720 PICS
+        Log In to 720HD
         <br/>
         {this.renderErrors()}
         <div className="login-form">
           <br/>
-          <label> Username
+          <label> <div>Username</div>
           <br/>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
               className="login-input"
-              placeholder="Username"
               />
           </label>
           <br/>
@@ -59,35 +59,35 @@ class SessionForm extends React.Component {
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input"
-              placeholder="Password"
               />
           </label>
           <br/>
           <input className="session-submit" type="submit" value={this.props.formType} />
           <br>
           </br>
-          Don't have an account? {this.props.navLink}
+          <div id="formTypeSwap">Don't have an account? {this.props.navLink}</div>
 
         </div>
       </form>
+    </div>
     );
   };
 
   signUpForm(){
     return (
+      <div className="form-container">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-        Join 720 PICS
+        Join 720HD
         <br/>
         {this.renderErrors()}
         <div className="login-form">
           <br/>
-          <label> Username
+          <label> <div>Username</div>
           <br/>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
               className="login-input"
-              placeholder="Username"
               />
           </label>
           <br/>
@@ -97,17 +97,17 @@ class SessionForm extends React.Component {
               value={this.state.password}
               onChange={this.update('password')}
               className="login-input"
-              placeholder="Password"
               />
           </label>
           <br/>
           <input className="session-submit" type="submit" value={this.props.formType} />
           <br>
           </br>
-          Already have an account? {this.props.navLink}
+          <div id="formTypeSwap">Already have an account? {this.props.navLink}</div>
 
         </div>
       </form>
+    </div>
     );
   };
 
@@ -115,6 +115,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
+
       <div className="login-form-container">
         {(this.props.formType==="Sign Up") ? this.signUpForm() : this.loginForm()}
       </div>

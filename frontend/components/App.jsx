@@ -9,13 +9,19 @@ import {
 } from 'react-router-dom';
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
-
+import { AuthRoute} from '../util/route_util';
+import GreetingContainer from './greeting/greeting_container';
 
 const App = () => (
   <div>
-    <h1>720 PICS</h1>
-      <Route path="/login" component={LoginFormContainer} />
-      <Route path="/signup" component={SignupFormContainer} />
+    <Link to={'/'}>
+      <h1>Welcome to 720HD</h1>
+    </Link>
+
+    <GreetingContainer />
+
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
   </div>
 );
 
