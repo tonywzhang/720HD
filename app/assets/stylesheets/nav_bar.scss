@@ -1,15 +1,19 @@
 .navbar-1 {
+  position:fixed;
   display: flex;
   justify-content: space-between;
   padding: 10px;
   color: black;
-  height: 20px;
+  width: 100vw;
+  height: 50px;
+  top: 0px;
 }
 
 .navbar-1 * {
   display: inline-block;
   color: black;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .nav_float_left{
