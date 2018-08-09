@@ -10,19 +10,14 @@ import {
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute} from '../util/route_util';
-import GreetingContainer from './greeting/greeting_container';
+import NavBarContainer from './navbar/navbar_container';
 
 const App = () => (
   <div>
-    <Link to={'/'}>
-      <h1>Welcome to 720HD</h1>
-    </Link>
-
-    <GreetingContainer />
-
+    <NavBarContainer />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-  </div>
+    </div>
 );
 
 export default App;
