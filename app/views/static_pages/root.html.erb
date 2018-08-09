@@ -1,5 +1,11 @@
 <main id="root">
 
+  <script type="text/javascript">
+  window.images = {
+    logo: "<%= asset_path("logo.png") %>"
+  }
+</script>
+
   <% if logged_in? %>
     <script type="text/javascript">
       window.currentUser = <%= render(

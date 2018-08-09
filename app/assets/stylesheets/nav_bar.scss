@@ -1,13 +1,11 @@
 .navbar-1 {
-  position:fixed;
   display: flex;
   justify-content: space-between;
-  padding: 10px;
   color: black;
   width: 100vw;
-  height: 50px;
-  top: 0px;
-  
+  height: 70px;
+  background-color: white;
+  border-bottom: 1px solid grey;
 }
 
 .navbar-1 * {
@@ -18,30 +16,36 @@
 }
 
 .nav_float_left{
-  display: block;
+  display: inline-block;
   padding: 14px 16px;
 }
 
-.nav_float_left * {
-  padding: 0px 16px;
+.nav_float_left img {
+  position: relative;
+  width: 70px;
+}
+
+#splash_links{
   font-size: 14px;
+  font-weight: 400;
+  color: #525558;
+  position: flex;
+  padding: 0px 16px;
 }
 
 .nav_float_right{
-  display: block;
+  display: flex;
   padding: 0px 16px;
 }
 
 #first_sign_up {
   background-color: #0099e5;
   color: white;
-  border-radius: 25px;
+  border-radius: 2px;
   border: 1px solid #0099e5;
   font-size: 14px;
-  font-weight: bold;
-  height: 25px;
   line-height: 26px;
-  padding: 0px 10px;
+  padding: 14px 16px;
 }
 
 #first_sign_up:hover{

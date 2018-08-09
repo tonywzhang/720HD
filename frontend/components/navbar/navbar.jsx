@@ -5,12 +5,16 @@ const NavBar = ({ currentUser, logout }) => {
 
   const loggedOut = () => (
     <div className="navbar-1">
+      <div>
       <div className = "nav_float_left">
-        <Link to={"/"}>Logo</Link>
+        <Link className="logo" to={"/"}><img src={window.images.logo}></img></Link>
+      </div>
+
+      <div id="splash_links">
         <Link to={"/"}>Discover</Link>
         <Link to={"/"}>About</Link>
-        <Link to={"/"}>Licensing</Link>
       </div>
+    </div>
 
       <div className = "nav_float_right">
         <Link to="/login">Log in</Link>

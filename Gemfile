@@ -53,6 +53,8 @@ group :development do
   gem 'pry-rails'
   gem 'annotate'
   gem 'guard-livereload', '~> 2.5', require: false
+  gem 'rb-readline'
+
 end
 
 group :test do
