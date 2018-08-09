@@ -28,6 +28,14 @@
   display: inline-block;
   color: white;
 }
+
+#first_sign_up {
+  background-color: #0099e5;
+  color: white;
+  border-radius: 3px;
+  padding: 2px;
+}
+
 #second_sign_up {
   border-radius: 3px;
   border: 1px solid black;

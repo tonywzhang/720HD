@@ -11,11 +11,8 @@ const NavBar = ({ currentUser, logout }) => {
         <Link to={"/"}>About</Link>
         <Link to={"/"}>Licensing</Link>
         <Link to="/login">Login</Link>
-        <Link to="/signup">Sign up</Link>
+        <Link to="/signup" id="first_sign_up">Sign up</Link>
       </div>
-
-      <div className="hook1">  Hook1 </div>
-      <div className="hook2">  Hook2 </div>
 
       <Link to="/signup" id="second_sign_up">Sign up</Link>
     </header>
