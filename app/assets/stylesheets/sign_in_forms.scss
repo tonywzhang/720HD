@@ -1,43 +1,45 @@
 .form-container {
-  display: block;
-    margin: 0 auto;
-    width: 375px;
-    height: 400px;
-    border: 1px solid grey;
-    padding: 10px;
-    border-radius: 3px;
-    color: #71767a;
-    border: 1px solid #eeeff2;
-    font-size: 24px;
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-    justify-content: center;
-}
-
-.form-container * {
-  text-align: center;
+  display: flex;
   margin: 0 auto;
+  width: 375px;
+  height: 400px;
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 3px;
+  color: #525558;
+  border: 1px solid #eeeff2;
+  font-size: 24px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+
+  * {
+    text-align: center;
+  }
+
+  label div {
+    font-size: 14px;
+    text-align: left;
+    color: #71767a;
+    text-indent: 25px;
+  }
+
+  input{
+    width: 318px;
+    height: 37px;
+    margin: 7px;
+    text-align: left;
+    border-radius: 3px;
+  }
+
+  #formTypeSwap {
+    font-size: 12px;
+  }
+
 }
 
-
-.form-container label {
-  font-size: 14px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  text-align: left;
-}
-
-.form-container input{
-  width: 80%;
-  margin: 10px;
-  margin-top: 0px;
-  height: 27px;
-}
-
-.form-container #formTypeSwap {
-  font-size: 12px;
-}
-
-input.session-submit {
+#session-submit {
   margin: 0 auto;
   margin-bottom: 10px;
   color: white;
@@ -47,34 +49,6 @@ input.session-submit {
   text-align: center;
   font-size: 20px;
   padding: 10px 0px;
-  height: 40px;
-  width: 305px;
-}
-
-.fb_submit {
-  margin: 0 auto;
-  margin-bottom: 10px;
-  color: white;
-  background-color: #3b5998;
-  border-radius: 2px;
-  align-items: center;
-  text-align: center;
-  font-size: 20px;
-  padding: 10px 0px;
-  height: 40px;
-  width: 305px;
-}
-
-.goog_submit {
-  margin: 0 auto;
-  margin-bottom: 10px;
-  color: #71767a;
-  background-color: white;
-  border-radius: 2px;
-  align-items: center;
-  text-align: center;
-  font-size: 20px;
-  padding: 10px 0px;
-  height: 40px;
-  width: 305px;
+  height: 37px;
+  width: 318px;
 }
