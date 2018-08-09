@@ -4,33 +4,29 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout }) => {
 
   const loggedOut = () => (
-    <header className="header">
-      <div className="navbar-1">
+    <div className="navbar-1">
+      <div className = "nav_float_left">
         <Link to={"/"}>Logo</Link>
         <Link to={"/"}>Discover</Link>
         <Link to={"/"}>About</Link>
         <Link to={"/"}>Licensing</Link>
-        <Link to="/login">Login</Link>
+      </div>
+
+      <div className = "nav_float_right">
+        <Link to="/login">Log in</Link>
         <Link to="/signup" id="first_sign_up">Sign up</Link>
       </div>
 
-      <Link to="/signup" id="second_sign_up">Sign up</Link>
-    </header>
-  );
-  const loggedIn = () => (
-    <div className="navbar-2">
-      <Link to={"/"}>Logo</Link>
-      <Link to={"/"}>Discover</Link>
-      <button className="header-button" onClick={logout}>Log Out</button>
     </div>
   );
 
-  return currentUser ? loggedIn() : loggedOut();
+  return loggedOut();
 };
 
 
 export default NavBar;
 
+// from navbar-1
 //  <div className="hook1">  Hook1 </div>
 //  <div className="hook2">  Hook2 </div>
 

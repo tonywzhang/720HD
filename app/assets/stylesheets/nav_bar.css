@@ -1,42 +1,44 @@
-.header {
-  text-align: center;
-  background-image: url("https://media.giphy.com/media/sjmetO8yUKb4c/giphy.gif");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-}
-
-.header * {
-  text-decoration: none;
-}
-
-.header img{
-  width: 80%;
-}
-
 .navbar-1 {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  color: white;
-  background-color: black;
+  color: black;
   height: 20px;
 }
 
 .navbar-1 * {
   display: inline-block;
-  color: white;
+  color: black;
+  text-decoration: none;
+}
+
+.nav_float_left{
+  display: block;
+  padding: 14px 16px;
+}
+
+.nav_float_left * {
+  padding: 0px 16px;
+  font-size: 14px;
+}
+
+.nav_float_right{
+  display: block;
+  padding: 0px 16px;
 }
 
 #first_sign_up {
   background-color: #0099e5;
   color: white;
-  border-radius: 3px;
-  padding: 2px;
+  border-radius: 25px;
+  border: 1px solid #0099e5;
+  font-size: 14px;
+  font-weight: bold;
+  height: 25px;
+  line-height: 26px;
+  padding: 0px 10px;
 }
 
-#second_sign_up {
-  border-radius: 3px;
-  border: 1px solid black;
+#first_sign_up:hover{
+  background-color: #00b3e5;
 }

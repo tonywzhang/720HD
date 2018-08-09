@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -63,9 +64,15 @@ class SessionForm extends React.Component {
           </label>
           <br/>
           <input className="session-submit" type="submit" value={this.props.formType} />
-          <br>
+          <button type="button" className= "fb_submit"> Connect with Facebook</button>
+          <button type="button" className= "goog_submit">Connect with Google</button>
+        <br>
           </br>
-          <div id="formTypeSwap">Don't have an account? {this.props.navLink}</div>
+          <div id="formTypeSwap">Don't have an account?
+            <Link to="/signup" onClick={()=>this.props.removeErrors()}>
+               Sign Up
+            </Link>
+          </div>
 
         </div>
       </form>
@@ -103,7 +110,11 @@ class SessionForm extends React.Component {
           <input className="session-submit" type="submit" value={this.props.formType} />
           <br>
           </br>
-          <div id="formTypeSwap">Already have an account? {this.props.navLink}</div>
+          <div id="formTypeSwap">Already have an account?
+            <Link to="/login" onClick={()=>this.props.removeErrors()}>
+               Log In
+            </Link>
+          </div>
 
         </div>
       </form>
@@ -124,3 +135,6 @@ class SessionForm extends React.Component {
 }
 
 export default withRouter(SessionForm);
+
+//  <input className="fb-submit" type="submit" value="Continue With Facebook" />
+//  <input className="goog-submit" type="submit" value="Continue With Google" />

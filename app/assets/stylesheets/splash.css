@@ -1,0 +1,42 @@
+.header {
+  text-align: center;
+  background-image: url("http://www.chem.ucla.edu/~kulisics/images/domestic/los_angeles/night/royce_hall.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 550px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+.header * {
+  text-decoration: none;
+}
+
+#large_header_text{
+  color: white;
+  font-size: 48px;
+  align-items: center;
+}
+
+#medium_header_text{
+  color: white;
+  font-size: 24px;
+  align-items: center;
+}
+
+#second_sign_up {
+  background-color: #0099e5;
+  color: white;
+  border-radius: 25px;
+  border: 1px solid #0099e5;
+  font-size: 25px;
+  font-weight: bold;
+  height: 15%;
+  line-height: 26px;
+  width: 20%;
+  padding: 10px, 10px;
+}
+
+#second_sign_up:hover{
+  background-color: #00b3e5;
+}
