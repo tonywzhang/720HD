@@ -7,6 +7,7 @@ import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import NavBarContainer from './navbar/navbar_container';
 import Splash from './splash_page/splash';
 
+
 const App = () => (
   <div>
     <NavBarContainer />

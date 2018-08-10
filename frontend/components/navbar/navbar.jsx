@@ -21,7 +21,44 @@ const NavBar = ({ currentUser, logout }) => {
     </div>
   );
 
-  return loggedOut();
+
+  const loggedIn = () => (
+    <div className="splash-navbar">
+      <div className="navbar-1">
+        <div className = "nav_float_left">
+          <Link to={"/"}>Logo</Link>
+          <Link to={"/"}>Discover</Link>
+          <Link to={"/"}>...</Link>
+        </div>
+
+      </div>
+      <div className = "nav_float_right">
+
+        <div className="searchbar_div">
+          <span className="fas fa-search"></span>
+          <input
+            type="text"
+            className="searchbar"
+            placeholder="       Search for photos, location, or people"
+            />
+        </div>
+
+
+        <div className="fa-icons">
+          <i className="fas fa-user-ninja"></i>
+        </div>
+
+        <div className="fa-icons">
+          <i className="fas fa-cloud-upload-alt"></i>
+        </div>
+        
+        <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
+      </div>
+
+    </div>
+  );
+
+  return currentUser ? loggedIn() : loggedOut();
 };
 
 
