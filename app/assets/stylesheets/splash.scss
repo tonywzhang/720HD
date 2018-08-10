@@ -1,27 +1,131 @@
+.splash_container{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
 .header {
   text-align: center;
-  background-image: url("http://www.chem.ucla.edu/~kulisics/images/domestic/los_angeles/night/royce_hall.jpg");
+  background-image: url("ny.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 550px;
-  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  height: 555px;
+  margin-bottom: 120px;
 }
 
 .header * {
   text-decoration: none;
 }
 
+.splash_header_1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.splash_caption_1 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 60px;
+}
+
+.top_photos{
+  display: grid;
+  background-color: white;
+  grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 10px;
+  margin: 100px;
+  height: 1200px;
+  margin-bottom: 150px;
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.features{
+  display: grid;
+  background-color: white;
+  grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+  grid-column-gap: 10px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 10px;
+  height: 1200px;
+  margin-bottom: 800px;
+  color: #525558;
+  align-items: center;
+
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  h2{
+    font-size: 36px;
+    padding: 0 60px;
+    font-weight: 400;
+  }
+
+  p{
+    font-size: 18px;
+    padding: 0 60px;
+  }
+}
+
+.splash_header_2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.splash_caption_2 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 50px;
+}
+
+.splash_header_3 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+
+.splash_caption_3 {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 50px;
+  border-bottom: 1px 
+
+}
+
+
 #large_header_text{
   color: white;
   font-size: 48px;
   align-items: center;
+  padding-top: 190px;
 }
 
 #medium_header_text{
   color: white;
   font-size: 24px;
   align-items: center;
+  padding-top: 35px;
+  padding-bottom: 50px;
 }
 
 #second_sign_up {
@@ -29,12 +133,11 @@
   color: white;
   border-radius: 25px;
   border: 1px solid #0099e5;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 20px;
   height: 15%;
   line-height: 26px;
   width: 20%;
-  padding: 10px, 10px;
+  padding: 15px 20px 15px 20px;
 }
 
 #second_sign_up:hover{

@@ -61,9 +61,9 @@ class SessionForm extends React.Component {
             />
         </label>
         <input id="session-submit" type="submit" value={this.props.formType} />
-        <div id="formTypeSwap">Don't have an account?
+        <div id="formTypeSwap">Don't have an account? 
           <Link to="/signup" onClick={()=>this.props.removeErrors()}>
-            Sign Up
+             Sign Up
           </Link>
         </div>
 
@@ -106,7 +106,7 @@ signUpForm(){
       <input id="session-submit" type="submit" value={this.props.formType} />
       <div id="formTypeSwap">Already have an account?
         <Link to="/login" onClick={()=>this.props.removeErrors()}>
-          Log In
+           Log In
         </Link>
       </div>
 

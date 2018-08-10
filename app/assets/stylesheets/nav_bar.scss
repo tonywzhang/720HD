@@ -1,36 +1,30 @@
-.navbar-1 {
+.splash-navbar{
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
-  color: black;
+  color: #0099e5;
   width: 100vw;
   height: 70px;
-  background-color: white;
+  background-color: black;
   border-bottom: 1px solid grey;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+
+  * {
+    text-decoration: none;
+  }
 }
 
-.navbar-1 * {
-  display: inline-block;
-  color: black;
+// .navbar-1 {
+// }
+
+.nav_float_left *{
+  display: inline-flex;
   text-decoration: none;
+  color: #0099e5;
+  margin-left: 30px;
+  margin-top: 25px;
   font-size: 14px;
-}
-
-.nav_float_left{
-  display: inline-block;
-  padding: 14px 16px;
-}
-
-.nav_float_left img {
-  position: relative;
-  width: 70px;
-}
-
-#splash_links{
-  font-size: 14px;
-  font-weight: 400;
-  color: #525558;
-  position: flex;
-  padding: 0px 16px;
 }
 
 .nav_float_right{
@@ -38,14 +32,27 @@
   padding: 0px 16px;
 }
 
+#login_link {
+  color: #0099e5;
+  padding-top: 25px;
+}
+
 #first_sign_up {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 20px;
   background-color: #0099e5;
   color: white;
-  border-radius: 2px;
+  border-radius: 20px;
   border: 1px solid #0099e5;
   font-size: 14px;
+  height: 28px;
+  padding: 0px 15px 0px 15px;
+  // margin: 10px 10px 10px 30px;
   line-height: 26px;
-  padding: 14px 16px;
 }
 
 #first_sign_up:hover{
