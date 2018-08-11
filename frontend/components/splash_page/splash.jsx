@@ -77,13 +77,13 @@ const splash = () => {
             <div className="ft2-2">
 
               <a className="socials" href="mailto:tonywzhang@gmail.com">
-                <i class="fab fa-google"></i>
+                <i className="fab fa-google"></i>
               </a>
 
               <br/>
 
               <a className="socials" href="tel:+16508883357">
-                <i class="fas fa-mobile"></i>
+                <i className="fas fa-mobile"></i>
               </a>
 
               <br/>

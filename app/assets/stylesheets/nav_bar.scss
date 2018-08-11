@@ -7,7 +7,7 @@
   width: 100vw;
   height: 70px;
   background-color: white;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #BEBEBE;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 
   * {
@@ -63,6 +63,7 @@
   margin-right: 15px;
 }
 
+
 #login_link {
   color: #0099e5;
   padding-right: 25px;
@@ -73,7 +74,6 @@
   align-items: center;
   justify-content: center;
   margin-right: 30px;
-  // margin-top: 20px;
   background-color: #0099e5;
   color: white;
   border-radius: 20px;

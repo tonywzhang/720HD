@@ -9,7 +9,7 @@ const NavBar = ({ currentUser, logout }) => {
         <div className = "nav_float_left">
           <Link to={"/"}>Logo</Link>
           <Link to={"/"}>Discover</Link>
-          <Link to={"/"}>About</Link>
+          <a href="https://www.linkedin.com/in/tony-wzhang/">About</a>
         </div>
       </div>
 
@@ -45,13 +45,13 @@ const NavBar = ({ currentUser, logout }) => {
 
 
         <div className="fa-icons">
-          <i className="fas fa-user-ninja"></i>
+            <i className="fas fa-user-ninja"></i>
         </div>
 
         <div className="fa-icons">
           <i className="fas fa-cloud-upload-alt"></i>
         </div>
-        
+
         <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
       </div>
 
@@ -65,8 +65,7 @@ const NavBar = ({ currentUser, logout }) => {
 export default NavBar;
 
 
-//from navbar-1
-//<Link className="logo" to={"/"}><img src={window.images.logo}></img></Link>
+
 // from navbar-1
 //  <div className="hook1">  Hook1 </div>
 //  <div className="hook2">  Hook2 </div>

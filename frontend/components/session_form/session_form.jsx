@@ -12,10 +12,10 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.demoUser = {
-      field: 'tonywzhang',
-      username: 'tonywzhang',
-      email: 'tonywzhang@gmail.com',
-      password: 'password'
+      field: 'guest',
+      username: 'guest',
+      email: 'guest@guest.com',
+      password: 'password' 
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
