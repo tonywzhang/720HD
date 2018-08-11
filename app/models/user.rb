@@ -19,6 +19,25 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
+  has_many :photos,
+  foreign_key: :author_id,
+  class_name: :Photo
+
+  has_many :likes,
+  foreign_key: :user_id,
+  class_name: :Like
+
+  has_many :liked_photos,
+    through: :likes
+    source: :photo
+
+  has_many :followers,
+  foreign_key: :user_id,
+  class_name: :Follow
+
+
+
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(field, password)

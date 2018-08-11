@@ -23,5 +23,8 @@ class Photo < ApplicationRecord
   foreign_key: :photo_id,
   class_name: :Like
 
+  has_many :likers,
+    through: :likes,
+    source: :user
 
 end
