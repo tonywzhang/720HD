@@ -45,38 +45,43 @@ const NavBar = ({ currentUser, logout }) => {
 
 
         <div className="fa-icons">
-            <i className="fas fa-user-ninja"></i>
+          <i className="fas fa-user-ninja"></i>
         </div>
 
         <div className="fa-icons">
-          <i className="fas fa-cloud-upload-alt"></i>
+          <form method="POST" encType="multipart/form-data" action="upload.php">
+            <input type="file" name="myfile"/>
+              <input type="submit" name="submit" value="Upload Now"/>
+          </form>
         </div>
 
-        <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
-      </div>
+          <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
+          </div>
 
-    </div>
-  );
+        </div>
+      );
 
-  return currentUser ? loggedIn() : loggedOut();
-};
-
-
-export default NavBar;
+      return currentUser ? loggedIn() : loggedOut();
+    };
 
 
+    export default NavBar;
 
-// from navbar-1
-//  <div className="hook1">  Hook1 </div>
-//  <div className="hook2">  Hook2 </div>
 
-//from nav_bar.css
-// .hook1 {
-//   font-size: 36px;
-//   color: black;
-// }
-//
-// .hook2 {
-//   font-size: 24px;
-//   color: black;
-// }
+    //<i className="fas fa-cloud-upload-alt"></i>
+
+
+    // from navbar-1
+    //  <div className="hook1">  Hook1 </div>
+    //  <div className="hook2">  Hook2 </div>
+
+    //from nav_bar.css
+    // .hook1 {
+    //   font-size: 36px;
+    //   color: black;
+    // }
+    //
+    // .hook2 {
+    //   font-size: 24px;
+    //   color: black;
+    // }

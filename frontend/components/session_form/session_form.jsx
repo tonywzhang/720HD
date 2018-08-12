@@ -15,12 +15,11 @@ class SessionForm extends React.Component {
       field: 'guest',
       username: 'guest',
       email: 'guest@guest.com',
-      password: 'password' 
+      password: 'password'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoLogin = this.demoLogin.bind(this);
   }
-
 
   update(field) {
     return e => this.setState({

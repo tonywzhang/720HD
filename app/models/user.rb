@@ -28,8 +28,8 @@ class User < ApplicationRecord
   class_name: :Like
 
   has_many :liked_photos,
-    through: :likes
-    source: :photo
+    through: :likes,
+    source: :photos
 
   has_many :followers,
   foreign_key: :user_id,
