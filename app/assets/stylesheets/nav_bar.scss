@@ -66,9 +66,13 @@
   border-radius: 20px;
   margin-right: 15px;
   background-color: $lightgray;
-  border-color: 1px solid $hex;
+  border: 0;
   font-size: 14px;
   padding-left: 30px;
+}
+
+.searchbar:focus{
+  outline: 0;
 }
 
 .fa-icons{

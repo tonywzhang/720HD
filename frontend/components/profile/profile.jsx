@@ -19,11 +19,11 @@ class Profile extends React.Component {
 
           <button className="follow">Follow</button>
 
-          <div className="username">{this.state.user.username}</div>
+          <div className="username animated bounceIn">{this.state.user.username}</div>
 
-          <div className="user-description">Lazy software-dev in-training, pretending to have in interest in photography</div>
+          <div className="user-description animated fadeIn">Lazy software-dev in-training, pretending to have in interest in photography</div>
 
-          <div className="user-details">
+          <div className="user-details animated flip">
             <ul>
               <li>
                 27,815,349 Photo Views
@@ -35,7 +35,7 @@ class Profile extends React.Component {
                 1 Following
               </li>
               <li>
-                <i class="fas fa-map-marker-alt"></i> <a href ='https://www.google.com/maps/place/San+Francisco,+CA/' className="google-maps">San Francisco, CA United States</a>
+                <i class="fas fa-map-marker-alt"></i> <a href ='https://www.google.com/maps/place/San+Francisco' className="google-maps">San Francisco, CA</a>
               </li>
             </ul>
           </div>

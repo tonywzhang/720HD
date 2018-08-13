@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SearchContainer from '../search/search_container';
 
 const NavBar = ({ currentUser, logout }) => {
 
@@ -34,14 +35,7 @@ const NavBar = ({ currentUser, logout }) => {
       </div>
       <div className = "nav_float_right">
 
-        <div className="searchbar_div">
-          <span className="fas fa-search"></span>
-          <input
-            type="text"
-            className="searchbar"
-            placeholder="       Search for photos, location, or people"
-            />
-        </div>
+        <SearchContainer />
 
 
         <div className="fa-icons">
