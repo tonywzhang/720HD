@@ -5,4 +5,88 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  background-color: $coconutmilk;
+
+  .profile-header-pic{
+    text-align: center;
+    background-image: image-url("banff1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 10px;
+  }
+
+  .profile-pic{
+    border-radius: 50%;
+    z-index: 2;
+
+    img {
+      height: 100px;
+      margin-top: -100px;
+    }
+  }
+
+  .follow {
+    display: inline-block;
+    float: right;
+    text-align: center;
+    font-size: 16px;
+    background-color: $babyblue;
+    color: white;
+    margin-right: 20px;
+    margin-top: -20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .username {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: $darkgray;
+  }
+
+  .user-description{
+    font-size: 14px;
+    color: $darkgray;
+    padding-bottom: 15px;
+  }
+
+  .user-details * {
+    text-decoration: none;
+  }
+
+  .user-details ul{
+    display: flex;
+    font-size: 14px;
+    color: $darkgray;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style: none;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $lightgray;
+  }
+
+
+  .profile-photos{
+    display: grid;
+    background-color: white;
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 10px;
+    height: 600px;
+    padding-top: 10px;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .google-maps{
+      color: $darkgray;
+  }
 }

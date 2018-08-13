@@ -30,12 +30,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user).then(() => this.props.history.push('feed'));
   }
 
   demoLogin(){
     this.setState(this.demoUser);
-    this.props.processForm(this.demoUser);
+    this.props.processForm(this.demoUser).then(() => this.props.history.push('feed'));
     //add .then(()) => this.props.history.push('/')) in case;
   }
 
@@ -145,7 +145,6 @@ signUpForm(){
 
 render() {
   return (
-
     <div className="login-form-container">
       {(this.props.formType==="Sign Up") ? this.signUpForm() : this.loginForm()}
     </div>

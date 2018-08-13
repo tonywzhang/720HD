@@ -1,0 +1,13 @@
+@import "constants";
+
+.nf-container{
+  padding-top: 80px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  .nf-header{
+    margin-top: -20px;
+  }
+}

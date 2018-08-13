@@ -45,42 +45,44 @@ const NavBar = ({ currentUser, logout }) => {
 
 
         <div className="fa-icons">
-          <i className="fas fa-user-ninja"></i>
+          <Link to={`/profile/${currentUser.id}`} className="navLink">
+            <i className="fas fa-user-ninja"></i>
+          </Link>
         </div>
 
         <div className="fa-icons">
-          <Link to={'/upload'}>
+          <Link to={'/upload'} className="navLink">
             <i className="fas fa-cloud-upload-alt"></i>
           </Link>
         </div>
 
-          <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
-          </div>
+        <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
+      </div>
 
-        </div>
-      );
+    </div>
+  );
 
-      return currentUser ? loggedIn() : loggedOut();
-    };
-
-
-    export default NavBar;
+  return currentUser ? loggedIn() : loggedOut();
+};
 
 
-    //<i className="fas fa-cloud-upload-alt"></i>
+export default NavBar;
 
 
-    // from navbar-1
-    //  <div className="hook1">  Hook1 </div>
-    //  <div className="hook2">  Hook2 </div>
+//<i className="fas fa-cloud-upload-alt"></i>
 
-    //from nav_bar.css
-    // .hook1 {
-    //   font-size: 36px;
-    //   color: black;
-    // }
-    //
-    // .hook2 {
-    //   font-size: 24px;
-    //   color: black;
-    // }
+
+// from navbar-1
+//  <div className="hook1">  Hook1 </div>
+//  <div className="hook2">  Hook2 </div>
+
+//from nav_bar.css
+// .hook1 {
+//   font-size: 36px;
+//   color: black;
+// }
+//
+// .hook2 {
+//   font-size: 24px;
+//   color: black;
+// }

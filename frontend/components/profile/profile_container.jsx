@@ -1,18 +1,20 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import NavBar from './navbar';
+import { fetchUser } from '../../actions/session_actions';
+import Profile from './profile';
 
-const mapStateToProps = ({ session, entities: { users } }) => {
+const mapStateToProps = ({ session, entities}, ownProps) => {
   return {
-    currentUser: users[session.id]
+    currentUser: entities.users[session.id],
+    userId: parseInt(ownProps.match.params.id),
+    user: entities.users[parseInt(ownProps.match.params.id)]
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-
+  fetchUser: (user) => dispatch(fetchUser(user))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(NavBar);
+)(Profile);

@@ -16,6 +16,11 @@
   * {
     text-decoration: none;
   }
+
+  .navLink{
+    color: $babyblue;
+  }
+
   i:hover{
     color: blue;
   }
@@ -30,7 +35,7 @@
   font-size: 14px;
 
   img {
-    height: 15px;
+    height: 21px;
     margin: 0 auto;
   }
 }

@@ -8,19 +8,20 @@ import NavBarContainer from './navbar/navbar_container';
 import Splash from './splash_page/splash';
 import Upload from './upload/upload';
 import Feed from './feed/feed';
+import ProfileContainer from './profile/profile_container';
+import NotFound from './not_found';
 
 const App = () => (
   <div>
     <NavBarContainer />
     <Switch>
-    <AuthRoute exact path="/login" component={LoginFormContainer} />
-    <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    <AuthRoute exact path="/" component={Splash} />
-    <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}>
-    <ProtectedRoute exact path="/" component={Feed}/>
-    <ProtectedRoute exact path="/upload" component={Upload}/>
-    <AuthRoute component={Splash}/>
-
+      <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <AuthRoute exact path="/" component={Splash} />
+      <ProtectedRoute exact path="/feed" component={Feed}/>
+      <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}/>
+      <ProtectedRoute exact path="/upload" component={Upload}/>
+      <Route component={NotFound}/>
     </Switch>
 
   </div>
