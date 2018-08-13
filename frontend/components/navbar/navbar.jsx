@@ -49,10 +49,9 @@ const NavBar = ({ currentUser, logout }) => {
         </div>
 
         <div className="fa-icons">
-          <form method="POST" encType="multipart/form-data" action="upload.php">
-            <input type="file" name="myfile"/>
-              <input type="submit" name="submit" value="Upload Now"/>
-          </form>
+          <Link to={'/upload'}>
+            <i className="fas fa-cloud-upload-alt"></i>
+          </Link>
         </div>
 
           <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>

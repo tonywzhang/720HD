@@ -1,13 +1,15 @@
+@import "constants";
+
 .splash-navbar{
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
-  color: #0099e5;
+  color: $babyblue;
   width: 100vw;
   height: 70px;
   background-color: white;
-  border-bottom: 1px solid #BEBEBE;
+  border-bottom: 1px solid $hexgray;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 
   * {
@@ -17,12 +19,13 @@
   i:hover{
     color: blue;
   }
+
 }
 
 .nav_float_left *{
   display: inline-flex;
   text-decoration: none;
-  color: #0099e5;
+  color: $babyblue;
   margin-left: 30px;
   margin-top: 25px;
   font-size: 14px;
@@ -53,19 +56,20 @@
   height: 26px;
   border-radius: 20px;
   margin-right: 15px;
-  background-color: #f7f8fa;
-  border-color: 1px solid #eeeff2;
+  background-color: $lightgray;
+  border-color: 1px solid $hex;
   font-size: 14px;
   padding-left: 30px;
 }
 
 .fa-icons{
   margin-right: 15px;
+  text-decoration: none;
 }
 
 
 #login_link {
-  color: #0099e5;
+  color: $babyblue;
   padding-right: 25px;
 }
 
@@ -74,10 +78,10 @@
   align-items: center;
   justify-content: center;
   margin-right: 30px;
-  background-color: #0099e5;
+  background-color: $babyblue;
   color: white;
   border-radius: 20px;
-  border: 1px solid #0099e5;
+  border: 1px solid $babyblue;
   font-size: 14px;
   height: 28px;
   padding: 0px 15px 0px 15px;
@@ -85,5 +89,5 @@
 }
 
 #first_sign_up:hover{
-  background-color: #00b3e5;
+  background-color: $lightoceanblue;
 }

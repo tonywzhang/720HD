@@ -1,10 +1,12 @@
+@import "constants";
+
 .splash_container{
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 }
 
 .header {
   text-align: center;
-  background-image: image-url("ny.jpg");
+  background-image: image-url("patagonia.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -57,7 +59,7 @@
   grid-row-gap: 10px;
   height: 800px;
   margin-bottom: 800px;
-  color: #525558;
+  color: $darkgray;
   align-items: center;
 
   img{
@@ -122,7 +124,7 @@
   }
 
   i:hover{
-    color: #0099e5;
+    color: $babyblue;
   }
 }
 
@@ -175,10 +177,10 @@
 }
 
 #second_sign_up {
-  background-color: #0099e5;
+  background-color: $babyblue;
   color: white;
   border-radius: 25px;
-  border: 1px solid #0099e5;
+  border: 1px solid $babyblue;
   font-size: 20px;
   height: 15%;
   line-height: 26px;
@@ -187,5 +189,5 @@
 }
 
 #second_sign_up:hover{
-  background-color: #00b3e5;
+  background-color: $lightoceanblue;
 }

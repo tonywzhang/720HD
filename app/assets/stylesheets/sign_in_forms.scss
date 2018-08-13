@@ -1,3 +1,5 @@
+@import "constants";
+
 .form-container {
   display: flex;
   margin: 0 auto;
@@ -6,17 +8,22 @@
   border: 1px solid grey;
   padding: 10px;
   border-radius: 3px;
-  color: #525558;
-  border: 1px solid #eeeff2;
+  color: $darkgray;
+  border: 1px solid $hex;
   font-size: 24px;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   justify-content: center;
   align-self: center;
   flex-direction: column;
-  padding-top: 50px;
+  margin-top: 100px;
+  padding-top: 10px;
 
   * {
     text-align: center;
+  }
+
+  .header-text{
+    margin-top: -40px;
   }
 
   label div {
@@ -45,7 +52,7 @@
     }
 
     .login_links{
-      color: #0099e5;
+      color: $babyblue;
     }
   }
 
@@ -54,14 +61,14 @@
     font-size: 12px;
     padding-left: 25px;
     .login_links{
-      color: #0099e5;
+      color: $babyblue;
     }
     div * {
       text-decoration: none;
     }
 
     .login_links{
-      color: #0099e5;
+      color: $babyblue;
     }
   }
 
@@ -71,7 +78,7 @@
   margin: 0 auto;
   margin-bottom: 10px;
   color: white;
-  background-color: #34bf49;
+  background-color: $submitgreen;
   border-radius: 2px;
   align-items: center;
   text-align: center;

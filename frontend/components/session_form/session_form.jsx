@@ -55,7 +55,9 @@ class SessionForm extends React.Component {
     return (
       <div className="form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Log In to 720HD
+          <div className="header-text">
+            Log In to 720HD
+          </div>
           {this.renderErrors()}
           <div className="login-form">
             <label><div>Username or Email</div>
@@ -94,7 +96,9 @@ signUpForm(){
   return (
     <div className="form-container">
       <form onSubmit={this.handleSubmit} className="login-form-box">
-        Join 720HD
+        <div className="header-text">
+          Join 720HD
+        </div>
         {this.renderErrors()}
         <div className="login-form">
           <label><div>Email</div>
@@ -114,25 +118,25 @@ signUpForm(){
       </label>
 
       <label> <div>Password</div>
-        <input type="password"
-          value={this.state.password}
-          onChange={this.update('password')}
-          className="login-input"
-          />
-      </label>
-      <input id="session-submit" type="submit" value={this.props.formType} />
-      <div id="formTypeSwap2">Already have an account?
-        <div>
-          <Link className="login_links" to="/login" onClick={()=>this.props.removeErrors()}>
+      <input type="password"
+        value={this.state.password}
+        onChange={this.update('password')}
+        className="login-input"
+        />
+    </label>
+    <input id="session-submit" type="submit" value={this.props.formType} />
+    <div id="formTypeSwap2">Already have an account?
+      <div>
+        <Link className="login_links" to="/login" onClick={()=>this.props.removeErrors()}>
           Log In
-          </Link>
-        </div>
-
-
+        </Link>
       </div>
 
+
     </div>
-  </form>
+
+  </div>
+</form>
 </div>
 );
 };
