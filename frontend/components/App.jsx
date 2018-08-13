@@ -12,11 +12,17 @@ import Feed from './feed/feed';
 const App = () => (
   <div>
     <NavBarContainer />
+    <Switch>
     <AuthRoute exact path="/login" component={LoginFormContainer} />
     <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    <ProtectedRoute exact path="/" component={Feed}/>
     <AuthRoute exact path="/" component={Splash} />
+    <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}>
+    <ProtectedRoute exact path="/" component={Feed}/>
     <ProtectedRoute exact path="/upload" component={Upload}/>
+    <AuthRoute component={Splash}/>
+
+    </Switch>
+
   </div>
 );
 

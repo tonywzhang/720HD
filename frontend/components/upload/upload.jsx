@@ -52,12 +52,14 @@ export default class Form extends React.Component {
     console.log(this.state);
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
     return (
-      <form onSubmit={this.handleSubmit.bind(this)}>
+      <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
         <label htmlFor="post-body">Body of Post</label>
+        <br/>
         <input type="text"
           id="post-body"
           value={this.state.title}
           onChange={this.handleInput.bind(this)}/>
+        <br/>
         <input type="file"
           onChange={this.handleFile.bind(this)}/>
         <h3>Image preview </h3>

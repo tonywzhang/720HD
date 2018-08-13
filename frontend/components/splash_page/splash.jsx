@@ -5,17 +5,17 @@ const splash = () => {
   return (
     <div className="splash_container">
       <div className="header">
-        <div id="large_header_text">Get inspired and share your best photos</div>
-        <div id="medium_header_text">Find your home among the world's best photographers</div>
+        <div id="large_header_text" className="animated fadeIn delay-2s">Get inspired and share your best photos</div>
+        <div id="medium_header_text" className="animated fadeIn delay-2s">Find your home among the world's best photographers</div>
         <Link to="/signup" id="second_sign_up">Join 720HD</Link>
       </div>
       <div className="splash_header_1">The top photos, chosen by you</div>
       <div className="splash_caption_1">Discover what’s trending according to photographers around the world.</div>
       <div className="top_photos">
-        <div className="1-1"><img src={window.images.steph_bron}></img></div>
-        <div className="1-2"><img src={window.images.dwade_bron}></img></div>
-        <div className="2-1"><img src={window.images.jordan}></img></div>
-        <div className="2-2"><img src={window.images.vc}></img></div>
+        <div className="1-1"><img src={window.images.pat1}></img></div>
+        <div className="1-2"><img src={window.images.yosemite}></img></div>
+        <div className="2-1"><img src={window.images.banff2}></img></div>
+        <div className="2-2"><img src={window.images.pat2}></img></div>
       </div>
 
 
