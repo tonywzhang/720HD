@@ -1,5 +1,15 @@
 .upload-form{
   margin-top: 100px;
   text-align: center;
-  
+  justify-content: center;
+  align-items: center;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 14px;
+
+  .preview{
+  }
+
+  input {
+    border-radius: 5px;
+  }
 }

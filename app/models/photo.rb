@@ -9,11 +9,11 @@
 #  location    :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#
 
 class Photo < ApplicationRecord
 
   validates :author_id, :title, presence: true
+  has_one_attached :file
 
   belongs_to :author,
   foreign_key: :author_id,

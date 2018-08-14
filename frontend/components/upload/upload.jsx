@@ -1,17 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       title: "",
+      description: "",
+      location: "",
       photoFile: null,
       photoUrl: null
     };
   }
 
-  handleInput(e) {
-    this.setState({title: e.currentTarget.value});
+  handleInput(field) {
+    return (e) => {
+      return this.setState({[field]: e.currentTarget.value});
+    }
   }
 
   handleFile(e) {
@@ -29,19 +34,21 @@ export default class Form extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    formData.append('post[title]', this.state.title);
-    if (this.state.photoFile) {
+    formData.append('photo[title]', this.state.title);
+    formData.append('photo[description]', this.state.description);
+    formData.append('photo[location]', this.state.location);
 
-      formData.append('post[photo]', this.state.photoFile);
+    if (this.state.photoFile) {
+      formData.append('photo[file]', this.state.photoFile);
     }
     $.ajax({
-      url: '/api/posts',
+      url: '/api/photos',
       method: 'POST',
       data: formData,
       contentType: false,
       processData: false
     }).then(
-      (response) => console.log(response.message),
+      (response) => console.log(response),
       (response) => {
         console.log(response.responseJSON)
       }
@@ -53,18 +60,35 @@ export default class Form extends React.Component {
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
     return (
       <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
-        <label htmlFor="post-body">Body of Post</label>
+        <label htmlFor="post-title">Title</label>
         <br/>
         <input type="text"
-          id="post-body"
+          id="post-title"
           value={this.state.title}
-          onChange={this.handleInput.bind(this)}/>
+          onChange={this.handleInput("title")}/>
         <br/>
+        <br/>
+          <label htmlFor="post-desc">Description</label>
+          <br/>
+          <input type="text"
+            id="post-desc"
+            value={this.state.description}
+            onChange={this.handleInput("description")}/>
+          <br/>
+          <br/>
+            <label htmlFor="post-loc">Location</label>
+            <br/>
+            <input type="text"
+              id="post-loc"
+              value={this.state.location}
+              onChange={this.handleInput("location")}/>
+            <br/>
+            <br/>
         <input type="file"
           onChange={this.handleFile.bind(this)}/>
         <h3>Image preview </h3>
-        {preview}
-        <button>Make a new Post!</button>
+        <div className="preview">{preview}</div>
+        <Link to={'/feed'}>Upload Photo</Link>
       </form>
     );
   }

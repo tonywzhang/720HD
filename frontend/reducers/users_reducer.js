@@ -10,10 +10,13 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_ALL_USERS:
       return merge({}, action.users);
     case RECEIVE_USER:
-      return merge({}, state, {[action.user.id]:action.user});
+      return merge({}, state, {[action.payload.user.id]: action.payload.user});
     default:
       return state;
   }
 };
 
 export default usersReducer;
+
+// case RECEIVE_USER:
+//   action.payload.photos

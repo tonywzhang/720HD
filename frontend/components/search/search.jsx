@@ -1,7 +1,8 @@
 import React from 'react';
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
+import {Link, withRouter} from 'react-router-dom';
 
-export default class Search extends React.Component {
+class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = { inputVal: ''};
@@ -10,7 +11,7 @@ export default class Search extends React.Component {
   }
 
   componentDidMount(){
-    this.setState({inputVal: "", names: this.props.fetchUsers()});
+    this.props.fetchUsers();
   };
 
   handleInput(event) {
@@ -18,13 +19,13 @@ export default class Search extends React.Component {
   }
 
   matches() {
-    const matches = [];
+    let matches = [];
     if (this.state.inputVal.length === 0) {
-      return this.props.names;
+      return [];
     }
 
-    this.props.names.forEach(name => {
-      const sub = name.slice(0, this.state.inputVal.length);
+    this.props.users.forEach(name => {
+      const sub = name.username.slice(0, this.state.inputVal.length);
       if (sub.toLowerCase() === this.state.inputVal.toLowerCase()) {
         matches.push(name);
       }
@@ -37,17 +38,25 @@ export default class Search extends React.Component {
     return matches;
   }
 
-  selectName(event) {
-    const name = event.currentTarget.innerText;
-    this.setState({inputVal: name});
+  selectName(userId) {
+    if (userId === undefined){
+      return null;
+    }
+
+    return () => {
+      this.setState({inputVal: ""});
+    }
   }
 
   render() {
+    if(!this.props.users) return null;
+
     const results = this.matches().map((result, i) => {
       return (
-        <li key={i} onClick={this.selectName}>{result}</li>
+        <li className="search-results"><Link to={`/profile/${result.id}`} key={i} onClick={this.selectName(result.id)}>{result.username}</Link></li>
       );
     });
+
     return(
       <div>
         <div className='searchbar_div'>
@@ -56,17 +65,16 @@ export default class Search extends React.Component {
             type="text"
             className="searchbar"
             placeholder="       Search for photos, location, or people"
+            onChange={this.handleInput}
+            value={this.state.inputVal}
             />
           <ul>
-            <ReactCSSTransitionGroup
-              transitionName='auto'
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}>
-              {results}
-            </ReactCSSTransitionGroup>
+            {results}
           </ul>
         </div>
       </div>
     );
   }
 };
+
+export default withRouter(Search);

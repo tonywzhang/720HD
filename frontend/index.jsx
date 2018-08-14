@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import {signup, logout, login} from './util/session_api_util.js';
+import {signup, logout, login, fetchUsers, fetchUser} from './util/session_api_util.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
@@ -22,7 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // TESTING START
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchUser = fetchUser;
   // TESTING END
+
+  window.fetchUsers = fetchUsers;
 
   // TESTING START
   window.login = login;

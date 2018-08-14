@@ -19,9 +19,9 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/" component={Splash} />
       <ProtectedRoute exact path="/feed" component={Feed}/>
-      <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}/>
       <ProtectedRoute exact path="/upload" component={Upload}/>
-      <Route component={NotFound}/>
+      <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}/>
+      <Route path="/" component={NotFound}/>
     </Switch>
 
   </div>

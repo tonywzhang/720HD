@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
-  background-color: $coconutmilk;
+  background-color: white;
 
   .profile-header-pic{
     text-align: center;
@@ -77,12 +77,12 @@
     grid-column-gap: 10px;
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 10px;
-    height: 600px;
+    height: 500px;
     padding-top: 10px;
     img{
       object-fit: cover;
       width: 100%;
-      height: 100%;
+      height: 1fr;
     }
   }
 

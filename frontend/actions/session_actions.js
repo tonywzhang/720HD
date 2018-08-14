@@ -26,14 +26,14 @@ export const removeErrors = () => ({
   type: REMOVE_SESSION_ERRORS
 });
 
-export const receiveAllUsers = () => ({
+export const receiveAllUsers = (users) => ({
   type: RECEIVE_ALL_USERS,
   users
 });
 
-export const receiveUser = (user) => ({
+export const receiveUser = (payload) => ({
   type: RECEIVE_USER,
-  user
+  payload
 });
 
 export const signup = user => dispatch => (
@@ -59,9 +59,9 @@ export const logout = () => dispatch => (
 );
 
 export const fetchUsers = () => dispatch => (
-  APIUtil.fetchUsers().then(users => (dispatch(receiveAllUsers())))
+  APIUtil.fetchUsers().then(users => (dispatch(receiveAllUsers(users))))
 );
 
 export const fetchUser = user => dispatch => (
-  APIUtil.fetchUser(user).then(user => (dispatch(receiveUser(user))))
+  APIUtil.fetchUser(user).then(payload => (dispatch(receiveUser(payload))))
 );

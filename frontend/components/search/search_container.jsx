@@ -3,7 +3,7 @@ import { fetchUsers, fetchUser } from '../../actions/session_actions';
 import Search from './search';
 
 const mapStateToProps = ({session,entities}) => {
-  debugger;
+
   return {
     currentUser: entities.users[session.id],
     users: Object.values(entities.users)

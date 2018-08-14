@@ -1,8 +1,9 @@
 class Api::PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
+    @photo.author_id = current_user.id
     if @photo.save
-      render "api/photos/show"
+      render :show
     else
       render json: @photo.errors.full_messages, status: 422
     end
@@ -10,22 +11,24 @@ class Api::PhotosController < ApplicationController
 
   def index
     @photos = Photo.where(author_id: params[:user_id])
-    render json: @photos
+    render :index
   end
 
   def show
     @photo = Photo.find(params[:id])
-    render json: @photo
+    render :show
   end
 
   def destroy
+    @photo = Photo.find(params[:id])
     @photo.destroy
+    render :show
   end
 
   private
 
-  def user_params
-    params.require(:photo).permit(:author_id, :title, :description, :location)
+  def photo_params
+    params.require(:photo).permit(:author_id, :title, :description, :location, :file)
   end
 
 end

@@ -27,7 +27,7 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/"}>Logo</Link>
+          <Link to={"/feed"}><img src={window.images.logo}></img></Link>
           <Link to={"/"}>Discover</Link>
           <Link to={"/"}>...</Link>
         </div>
@@ -36,7 +36,6 @@ const NavBar = ({ currentUser, logout }) => {
       <div className = "nav_float_right">
 
         <SearchContainer />
-
 
         <div className="fa-icons">
           <Link to={`/profile/${currentUser.id}`} className="navLink">

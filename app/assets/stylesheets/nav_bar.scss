@@ -56,6 +56,12 @@
     z-index: 2;
     color: grey;
     top: 8px;
+    margin-top: 15px;
+  }
+
+  li {
+    list-style: none;
+    text-decoration: none;
   }
 }
 
@@ -69,6 +75,7 @@
   border: 0;
   font-size: 14px;
   padding-left: 30px;
+  margin-top: 15px;
 }
 
 .searchbar:focus{
