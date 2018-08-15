@@ -27,7 +27,7 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/feed"}><img src={window.images.logo}></img></Link>
+          <Link to={"/"}><img src={window.images.logo}></img></Link>
           <Link to={"/"}>Discover</Link>
           <Link to={"/"}>...</Link>
         </div>

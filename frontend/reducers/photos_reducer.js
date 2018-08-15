@@ -6,7 +6,7 @@ const photosReducer = (state = {}, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_USER:
-      return action.payload.photos;
+      return Object.assign({}, action.payload.photos);
     default:
       return state;
   }

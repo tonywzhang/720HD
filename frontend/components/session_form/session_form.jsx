@@ -12,9 +12,9 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.demoUser = {
-      field: 'guest',
-      username: 'guest',
-      email: 'guest@guest.com',
+      field: 'tony',
+      username: 'tony',
+      email: 'tony@tony.com',
       password: 'password'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,12 +30,12 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(() => this.props.history.push('feed'));
+    this.props.processForm(user).then(() => this.props.history.push('/feed'));
   }
 
   demoLogin(){
     this.setState(this.demoUser);
-    this.props.processForm(this.demoUser).then(() => this.props.history.push('feed'));
+    this.props.processForm(this.demoUser);
     //add .then(()) => this.props.history.push('/')) in case;
   }
 
@@ -83,7 +83,7 @@ class SessionForm extends React.Component {
               Sign Up
             </Link>
           </div>
-          <div className="login_links" onClick={()=>this.demoLogin()}>Demo Login</div>
+          <Link to={'/feed'} className="login_links" onClick={()=>this.demoLogin()}>Demo Login</Link>
         </div>
 
       </div>

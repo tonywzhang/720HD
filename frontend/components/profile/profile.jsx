@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 class Profile extends React.Component {
   constructor(props){
     super(props);
-    // debugger;
   }
 
   componentWillReceiveProps(nextProps){
@@ -19,8 +18,9 @@ class Profile extends React.Component {
   }
 
   render(){
-    if(!this.props.users[this.props.userId]) return null;
-    if(!this.props.users[this.props.userId].photos) return null;
+    if(!this.props.user) return null;
+    console.log(this.props);
+
     return (
       <div>
         <h1 className="profile-container">
@@ -52,8 +52,8 @@ class Profile extends React.Component {
 
 
           <div className="profile-photos">
-            {Object.values(this.props.users[this.props.userId].photos).map((photo)=>{
-              return <img src={photo.photoUrl} />
+            {Object.values(this.props.photos).reverse().map((photo)=>{
+                return <img src={photo.photoUrl} />;
             })}
           </div>
         </h1>
@@ -61,33 +61,5 @@ class Profile extends React.Component {
     );
   }
 }
-
-/*<div className="profile-1-1">
-  <img src={window.images.pat1}></img>
-</div>
-<div className="profile-1-2">
-  <img src={window.images.pat2}></img>
-</div>
-<div className="profile-1-3">
-  <img src={window.images.yosemite}></img>
-</div>
-<div className="profile-1-4">
-  <img src={window.images.banff2}></img>
-</div>
-<div className="profile-2-1">
-  <img src={window.images.vc}></img>
-</div>
-<div className="profile-2-2">
-  <img src={window.images.dwade_bron}></img>
-</div>
-<div className="profile-2-3">
-  <img src={window.images.steph_bron}></img>
-</div>
-<div className="profile-2-4">
-  <img src={window.images.pat1}></img>
-</div>*/
-
-
-
 
 export default Profile;
