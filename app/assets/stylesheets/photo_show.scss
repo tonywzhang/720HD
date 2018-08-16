@@ -59,6 +59,8 @@
 
   .buttons{
     margin-bottom: 10px;
+
+
   }
 
   .follow-button *{
@@ -87,6 +89,12 @@
 
   .photo-buttons{
     display: flex;
+
+  }
+
+  .edit:hover{
+    color: white;
+    background-color: $babyblue;
   }
 
   .edit {
@@ -107,38 +115,44 @@
 
   .photo-details{
     color: $darkgray;
-    margin-top: 30px;
+    position: relative;
+    top: 150px;
 
     .section-title{
       font-size: 30px;
       font-weight: 700;
-      margin-bottom: 30px;
-      margin-top: 10px;
     }
 
     .photo-title{
-      font-size: 24px;
-      padding-top: 50px;
-      padding-bottom: 10px;
+      font-size: 36px;
+      padding-bottom: 25px;
     }
 
     .photo-description{
-      padding-top: 50px;
-      font-size: 24px;
-      padding-bottom: 10px;
+      font-size: 20px;
+      padding-bottom: 5px;
     }
     .photo-location{
-      padding-top: 50px;
-      font-size: 24px;
-      padding-bottom: 10px;
+      font-size: 14px;
+      padding-bottom: 5px;
     }
 
     .photo-date {
-      padding-top: 50px;
       font-size: 14px;
     }
 
   }
+
+  .edit-form label *{
+    display: block;
+  }
+
+  .submit-button{
+    background-color: $babyblue;
+    color: white;
+    border-radius: 5px;
+  }
+
 
   button:hover{
     background-color: $babyblue;

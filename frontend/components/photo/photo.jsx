@@ -103,7 +103,7 @@ class Photo extends React.Component {
                 {this.props.details.description}
               </div>
               <div className="photo-location">
-                {this.props.details.location}
+                <i className="fas fa-map-marker-alt"> </i>{this.props.details.location}
               </div>
 
               <div className="photo-date">
@@ -119,7 +119,6 @@ class Photo extends React.Component {
   };
 
   render(){
-
     if(Object.values(this.props.details).length===0) return "Loading";
 
     return (this.props.currentUser.id === this.props.details.author_id) ? this.ownPhoto() : this.otherPhoto();

@@ -60,8 +60,8 @@ class EditPhotoForm extends React.Component {
               </div>
             </div>
 
-            <div className="photo-details animated bounceIn infinite">
-              <form onSubmit={this.handleSubmit}>
+            <div className="photo-details">
+              <form onSubmit={this.handleSubmit} className="edit-form">
                 <label>Title
                   <input
                     type="text"
@@ -82,7 +82,7 @@ class EditPhotoForm extends React.Component {
                     onChange={this.update('location')} />
                 </label>
 
-                <input type="submit" value="Submit Changes"/>
+                <input type="submit" value="Submit Changes" className="submit-button"/>
               </form>
             </div>
           </div>

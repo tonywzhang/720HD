@@ -35,8 +35,6 @@ class User < ApplicationRecord
   foreign_key: :user_id,
   class_name: :Follow
 
-  # has_many_attached :photos
-
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(field, password)

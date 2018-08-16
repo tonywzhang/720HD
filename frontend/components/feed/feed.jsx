@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 class Feed extends React.Component {
-  constructor(props) {
+  constructor(props){
     super(props);
   }
 
@@ -18,21 +18,27 @@ class Feed extends React.Component {
   }
 
   render(){
-    if(!this.props.user) return null;
-    debugger;
+    // if(!this.props.user) return null;
+    // debugger;
 
     return (
-      <div className="feed-container">
-        <h1 className="feed-header">
-          Most Recent Photos
-        </h1>
+      <div className="feed">
+        <div className="feed-container">
+          <h1 className="feed-header">
+            Most Recent Photos
+          </h1>
 
-        <div className="feed-photos">
-          {Object.values(this.props.photos).reverse().map((photo)=>{
-              return <Link to={`/profile/${this.props.userId}/photos/${photo.id}`}>
-                <img src={photo.photoUrl} />
-              </Link>
-          })}
+          <div className="feed-photos">
+            {Object.values(this.props.photos).reverse().map((photo)=>{
+              return (
+              <div className="pf-container">
+              <Link className="feed-show" to={`/profile/${this.props.currentUser.id}/photos/${photo.id}`}>
+                  <img src={photo.photoUrl} />
+                </Link>
+              </div>
+            );
+            })}
+          </div>
         </div>
       </div>
     );
@@ -41,3 +47,8 @@ class Feed extends React.Component {
 }
 
 export default withRouter(Feed);
+
+
+
+// <Link className="profile-link" to={`/profile/${photo.author_id}`}>{photo.author}</Link>
+// <br/>

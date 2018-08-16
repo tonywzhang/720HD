@@ -8,6 +8,7 @@ json.photos do
       json.photoUrl url_for(photo.file)
       json.author_id @user.id
       json.id photo.id
+      json.author @user.username
     end
   end
 end

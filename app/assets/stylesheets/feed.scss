@@ -8,4 +8,45 @@
   font-size: 36px;
   color: $darkgray;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+
+
+  .feed-photos{
+    display: grid;
+    background-color: white;
+    grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr);
+    padding-right: 10px;
+    padding-left: 10px;
+    grid-column-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: 10px;
+    height: 500px;
+    padding-top: 10px;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .pf-container {
+    display:block;
+    font-size: 18px;
+  }
+
+  .profile-link {
+    text-decoration: none;
+    margin-right: 750px;
+    color: black;
+  }
+
+  .profile-link:hover{
+    color: $babyblue;
+  }
+
+  .feed-show{
+    padding-top: 30px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+  }
 }

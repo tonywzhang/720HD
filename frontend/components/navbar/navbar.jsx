@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import SearchContainer from '../search/search_container';
 
 const NavBar = ({ currentUser, logout }) => {
@@ -8,8 +8,7 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/"}><img src={window.images.logo}></img></Link>
-          <Link to={"/"}>Discover</Link>
+          <Link to={"/"}><img src={window.images.logo}></img></Link><a href="https://www.facebook.com/tonywzhang">Discover</a>
           <a href="https://www.linkedin.com/in/tony-wzhang/">About</a>
         </div>
       </div>
@@ -28,7 +27,7 @@ const NavBar = ({ currentUser, logout }) => {
       <div className="navbar-1">
         <div className = "nav_float_left">
           <Link to={"/feed"}><img src={window.images.logo}></img></Link>
-          <Link to={"/"}>Discover</Link>
+          <Link to={"/feed"}>Discover</Link>
           <Link to={"/"}>...</Link>
         </div>
 
@@ -59,23 +58,4 @@ const NavBar = ({ currentUser, logout }) => {
 };
 
 
-export default NavBar;
-
-
-//<i className="fas fa-cloud-upload-alt"></i>
-
-
-// from navbar-1
-//  <div className="hook1">  Hook1 </div>
-//  <div className="hook2">  Hook2 </div>
-
-//from nav_bar.css
-// .hook1 {
-//   font-size: 36px;
-//   color: black;
-// }
-//
-// .hook2 {
-//   font-size: 24px;
-//   color: black;
-// }
+export default withRouter(NavBar);

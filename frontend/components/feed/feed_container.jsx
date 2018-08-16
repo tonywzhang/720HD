@@ -3,6 +3,7 @@ import { fetchUser } from '../../actions/session_actions';
 import Feed from './feed';
 
 const mapStateToProps = (state, ownProps) => {
+  // debugger;
   return {
     currentUser: state.entities.users[state.session.id],
     userId: ownProps.match.params.id,

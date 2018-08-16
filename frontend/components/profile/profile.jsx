@@ -64,4 +64,4 @@ class Profile extends React.Component {
   }
 }
 
-export default Profile;
+export default withRouter(Profile);
