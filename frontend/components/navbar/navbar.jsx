@@ -27,7 +27,7 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/"}><img src={window.images.logo}></img></Link>
+          <Link to={"/feed"}><img src={window.images.logo}></img></Link>
           <Link to={"/"}>Discover</Link>
           <Link to={"/"}>...</Link>
         </div>
@@ -49,7 +49,7 @@ const NavBar = ({ currentUser, logout }) => {
           </Link>
         </div>
 
-        <Link to="/signup" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
+        <Link to="/" id="first_sign_up" onClick={()=> logout()}>Log Out</Link>
       </div>
 
     </div>

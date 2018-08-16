@@ -53,7 +53,9 @@ class Profile extends React.Component {
 
           <div className="profile-photos">
             {Object.values(this.props.photos).reverse().map((photo)=>{
-                return <img src={photo.photoUrl} />;
+                return <Link to={`/profile/${this.props.userId}/photos/${photo.id}`}>
+                  <img src={photo.photoUrl} />
+                </Link>
             })}
           </div>
         </h1>

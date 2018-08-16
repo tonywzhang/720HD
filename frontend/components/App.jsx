@@ -10,6 +10,8 @@ import Upload from './upload/upload';
 import Feed from './feed/feed';
 import ProfileContainer from './profile/profile_container';
 import NotFound from './not_found';
+import PhotoContainer from './photo/photo_container';
+import EditPhotoContainer from './photo/edit_photo_container';
 
 const App = () => (
   <div>
@@ -17,10 +19,12 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
+      <ProtectedRoute exact path="/profile/:id/photos/:photoId/edit" component={EditPhotoContainer} />
+      <ProtectedRoute exact path="/profile/:id/photos/:photoId" component={PhotoContainer} />
+      <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}/>
       <ProtectedRoute exact path="/feed" component={Feed}/>
       <AuthRoute exact path="/" component={Splash} />
       <ProtectedRoute exact path="/upload" component={Upload}/>
-      <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}/>
     </Switch>
 
   </div>

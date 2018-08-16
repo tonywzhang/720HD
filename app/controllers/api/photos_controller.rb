@@ -14,13 +14,25 @@ class Api::PhotosController < ApplicationController
     render :index
   end
 
+  def update
+    @photo = Photo.find(params[:id])
+    if @photo.update(photo_params)
+      @owner = @photo.author
+      render :show
+    else
+      render json: @photo.errors.full_messages, status: 422
+    end
+  end
+
   def show
     @photo = Photo.find(params[:id])
+    @owner = @photo.author
     render :show
   end
 
   def destroy
     @photo = Photo.find(params[:id])
+    @owner = @photo.author
     @photo.destroy
     render :show
   end
@@ -28,7 +40,8 @@ class Api::PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:author_id, :title, :description, :location, :file)
+    params.require(:photo).permit(:author_id, :title, :description, :location)
+    # :file?
   end
 
 end

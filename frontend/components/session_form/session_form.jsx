@@ -30,13 +30,15 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user).then(() => this.props.history.push('/feed'));
+    this.props.processForm(user)
+    .then(() => this.props.history.push('/feed'));
   }
 
   demoLogin(){
     this.setState(this.demoUser);
-    this.props.processForm(this.demoUser);
-    //add .then(()) => this.props.history.push('/')) in case;
+    this.props.processForm(this.demoUser)
+    .then(() => { this.props.history.push('/feed');
+    });
   }
 
   renderErrors() {

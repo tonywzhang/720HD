@@ -42,7 +42,7 @@
   }
 
   .username {
-    padding-top: 15px;
+    padding-top: 5px;
     padding-bottom: 15px;
     font-size: 30px;
     color: $darkgray;
@@ -74,15 +74,17 @@
     display: grid;
     background-color: white;
     grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr) minmax(250px, 1fr);
+    padding-right: 10px;
+    padding-left: 10px;
     grid-column-gap: 10px;
-    grid-template-rows: repeat(2, 1fr);
+    // grid-template-rows: repeat(2, 1fr);
     grid-row-gap: 10px;
     height: 500px;
     padding-top: 10px;
     img{
       object-fit: cover;
       width: 100%;
-      height: 1fr;
+      height: 100%;
     }
   }
 

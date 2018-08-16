@@ -1,0 +1,147 @@
+@import "constants";
+
+.photo-container{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  display: grid;
+  background-color: white;
+  grid-template-columns: minmax(250px, 5fr) minmax(250px, 1fr);
+  grid-column-gap: 100px;
+  // grid-template-rows: repeat(2, 1fr);
+  // grid-row-gap: 10px;
+  margin: 100px;
+  margin-top: 90px;
+  height: 600px;
+  margin-bottom: 150px;
+  img{
+    object-fit: fill;
+    width: 100%;
+    // height: 100%;
+  }
+
+  .photo-display{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .photo-detail-container {
+    margin-top: 20px;
+    display: border;
+    padding-left: 15px;
+    font-size: 14px;
+    border-left: 1px solid $lightgray;
+  }
+
+  .photo-detail-container{
+    display: block;
+
+    .profile-picture{
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .photo-det-UN *{
+      margin-top: -45px;
+      margin-left: -90px;
+      display: flex;
+      text-decoration: none;
+      padding-bottom: 15px;
+      color: $darkgray;
+      font-size: 18px;
+      text-align: center;
+      justify-content: center;
+    }
+
+  }
+
+
+  .buttons{
+    margin-bottom: 10px;
+  }
+
+  .follow-button *{
+    margin-top: 10px;
+    background-color: white;
+    color: $babyblue;
+    border-color: $babyblue;
+    border-radius: 5px;
+  }
+
+  .like-button *{
+    margin-top: 20px;
+    background-color: $babyblue;
+    color: white;
+    border-radius: 15px;
+    border: 1px solid $babyblue;
+    font-size: 20px;
+    height: 30px;
+    line-height: 26px;
+    width: 100px;
+  }
+
+  .like-button button:hover{
+    background-color: $lightoceanblue;
+  }
+
+  .photo-buttons{
+    display: flex;
+  }
+
+  .edit {
+    text-decoration: none;
+    border: 1px solid $babyblue;
+    padding: 5px;
+    border-radius: 25px;
+    margin-right: 2px;
+  }
+
+  .photo-buttons *{
+    margin-top: 30px;
+    background-color: white;
+    color: $babyblue;
+    border-color: $babyblue;
+    border-radius: 5px;
+  }
+
+  .photo-details{
+    color: $darkgray;
+    margin-top: 30px;
+
+    .section-title{
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+
+    .photo-title{
+      font-size: 24px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+
+    .photo-description{
+      padding-top: 50px;
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+    .photo-location{
+      padding-top: 50px;
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+
+    .photo-date {
+      padding-top: 50px;
+      font-size: 14px;
+    }
+
+  }
+
+  button:hover{
+    background-color: $babyblue;
+    color: white;
+  }
+}

@@ -6,7 +6,8 @@ export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 export const REMOVE_SESSION_ERRORS = 'REMOVE_SESSION_ERRORS';
 export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
 export const RECEIVE_USER = "RECEIVE_USER";
-
+export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
+export const REMOVE_PHOTO = "REMOVE_PHOTO";
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -34,6 +35,16 @@ export const receiveAllUsers = (users) => ({
 export const receiveUser = (payload) => ({
   type: RECEIVE_USER,
   payload
+});
+
+export const receivePhoto = photo => ({
+  type: RECEIVE_PHOTO,
+  photo
+});
+
+const removePhoto = photoId => ({
+  type: REMOVE_PHOTO,
+  photoId
 });
 
 export const signup = user => dispatch => (
@@ -64,4 +75,16 @@ export const fetchUsers = () => dispatch => (
 
 export const fetchUser = userId => dispatch => (
   APIUtil.fetchUser(userId).then(payload => (dispatch(receiveUser(payload))))
+);
+
+export const fetchPhoto = photo => dispatch => (
+  APIUtil.fetchPhoto(photo).then(payload => (dispatch(receivePhoto(payload))))
+);
+
+export const updatePhoto = photo => dispatch => (
+  APIUtil.updatePhoto(photo).then(photo => dispatch(receivePhoto(photo)))
+);
+
+export const deletePhoto = photoId => dispatch => (
+  APIUtil.deletePhoto(photoId).then(photo => dispatch(removePhoto(photoId)))
 );

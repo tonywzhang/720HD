@@ -14,30 +14,30 @@ user2 = User.create!(username: "guest2", email: "guest1@guest.com", password: "p
 tony = User.create!(username: "tony", email: "tony@tony.com", password: "password")
 
 
-file = File.open('app/assets/images/vc.jpg')
+file = File.open('app/assets/images/whistler.jpg')
 
-vc = Photo.create!(author_id: tony.id, title: "Vince Carter in 2000", description: "Best Dunker in NBA History", location: "Oracle Arena")
+whistler = Photo.create!(author_id: user1.id, title: "Whistler National Park", description: "Winter Whistler", location: "Whistler, Canada")
 
-vc.file.attach(io: file, filename: "vc.jpg")
+whistler.file.attach(io: file, filename: "vc.jpg")
 
 
 file = File.open('app/assets/images/patagonia.jpg')
 
-pat = Photo.create!(author_id: tony.id, title: "Patagonia", description: "Beautiful Patagonia", location: "Canadia")
+pat = Photo.create!(author_id: tony.id, title: "Patagonia", description: "Patagonia in the Winter", location: "Argentina")
 
 pat.file.attach(io: file, filename: "patagonia.jpg")
 
 
-file = File.open('app/assets/images/prof.jpg')
+file = File.open('app/assets/images/ny.jpg')
 
-prof = Photo.create!(author_id: tony.id, title: "Profile Pic", description: "Taken at UCLA", location: "Royce Hall")
+ny = Photo.create!(author_id: tony.id, title: "New York", description: "Nightshot of NY", location: "New York")
 
-prof.file.attach(io: file, filename: "prof.jpg")
+ny.file.attach(io: file, filename: "ny.jpg")
 
 
 file = File.open('app/assets/images/banff2.jpg')
 
-banff = Photo.create!(author_id: tony.id, title: "Banff", description: "Beautiful All New Flowing Fluid", location: "Canadia")
+banff = Photo.create!(author_id: tony.id, title: "Banff National Park", description: "Winter in BNP", location: "Canadia")
 
 banff.file.attach(io: file, filename: "banff2.jpg")
 
@@ -45,30 +45,37 @@ banff.file.attach(io: file, filename: "banff2.jpg")
 
 file = File.open('app/assets/images/patagonia2.jpg')
 
-pat2 = Photo.create!(author_id: tony.id, title: "Patagonia", description: "Gorgeous View", location: "Canadia")
+pat2 = Photo.create!(author_id: tony.id, title: "Patagonia", description: "Patagonia Panoramic View", location: "Canada")
 
 pat2.file.attach(io: file, filename: "patagonia2.jpg")
 
 
 
-file = File.open('app/assets/images/steph_bron.png')
+file = File.open('app/assets/images/jasper.jpg')
 
-sb = Photo.create!(author_id: tony.id, title: "Steph and Bron", description: "2 GOATs", location: "HoF")
+jnp = Photo.create!(author_id: tony.id, title: "Jasper National Park", description: "Paranoramic View of Jasper", location: "Jasper National Park, Canada")
 
-sb.file.attach(io: file, filename: "steph_bron.png")
+jnp.file.attach(io: file, filename: "jasper.jpg")
 
 
 
-file = File.open('app/assets/images/dwade_bron.jpg')
+file = File.open('app/assets/images/sunwapta-falls.jpg')
 
-dlbj = Photo.create!(author_id: tony.id, title: "Robin to Batman", description: "PB&J", location: "Milwaukee")
+supwap = Photo.create!(author_id: tony.id, title: "Sunwapta Falls", description: "Sunwapta Falls at Jasper National Park", location: "Jasper National Park, Canada")
 
-dlbj.file.attach(io: file, filename: "dwade_bron.jpg")
+supwap.file.attach(io: file, filename: "sunwapta-falls.jpg")
 
 
 
 file = File.open('app/assets/images/banff1.jpg')
 
-banff1 = Photo.create!(author_id: tony.id, title: "Banff", description: "Beautiful All New Flowing Fluid", location: "Canadia")
+banff1 = Photo.create!(author_id: tony.id, title: "Banff National Park", description: "Spring in Banff", location: "Banff National Park, Canada")
 
 banff1.file.attach(io: file, filename: "banff1.jpg")
+
+
+file = File.open('app/assets/images/greatsept.jpg')
+
+gs = Photo.create!(author_id: tony.id, title: "The Great Sept", description: "Before Cersei blew it up", location: "King's Landing")
+
+gs.file.attach(io: file, filename: "greatsept.jpg")
