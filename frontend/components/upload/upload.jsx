@@ -50,9 +50,9 @@ export default class Form extends React.Component {
     }).then(
       (response) => console.log(response),
       (response) => {
-        console.log(response.responseJSON)
+        console.log(response.responseJSON);
       }
-    );
+    ).then(this.props.history.push('/feed'));
   }
 
   render() {
@@ -88,7 +88,7 @@ export default class Form extends React.Component {
           onChange={this.handleFile.bind(this)}/>
         <h3>Image preview </h3>
         <div className="preview">{preview}</div>
-        <Link to={'/feed'}>Upload Photo</Link>
+        <input type="submit" value="Upload Photo"/>
       </form>
     );
   }

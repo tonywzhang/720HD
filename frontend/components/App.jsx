@@ -7,7 +7,7 @@ import { AuthRoute, ProtectedRoute} from '../util/route_util';
 import NavBarContainer from './navbar/navbar_container';
 import Splash from './splash_page/splash';
 import Upload from './upload/upload';
-import Feed from './feed/feed';
+import FeedContainer from './feed/feed_container';
 import ProfileContainer from './profile/profile_container';
 import NotFound from './not_found';
 import PhotoContainer from './photo/photo_container';
@@ -22,7 +22,7 @@ const App = () => (
       <ProtectedRoute exact path="/profile/:id/photos/:photoId/edit" component={EditPhotoContainer} />
       <ProtectedRoute exact path="/profile/:id/photos/:photoId" component={PhotoContainer} />
       <ProtectedRoute exact path="/profile/:id" component={ProfileContainer}/>
-      <ProtectedRoute exact path="/feed" component={Feed}/>
+      <ProtectedRoute exact path="/feed" component={FeedContainer}/>
       <AuthRoute exact path="/" component={Splash} />
       <ProtectedRoute exact path="/upload" component={Upload}/>
     </Switch>

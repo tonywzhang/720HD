@@ -19,7 +19,7 @@ class Profile extends React.Component {
 
   render(){
     if(!this.props.user) return null;
-    console.log(this.props);
+    // console.log(this.props);
 
     return (
       <div>
