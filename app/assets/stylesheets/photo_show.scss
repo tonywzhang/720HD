@@ -4,18 +4,15 @@
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   display: grid;
   background-color: white;
-  grid-template-columns: minmax(250px, 5fr) minmax(250px, 1fr);
+  grid-template-columns: minmax(250px, 3fr) minmax(250px, 1.5fr);
   grid-column-gap: 100px;
-  // grid-template-rows: repeat(2, 1fr);
-  // grid-row-gap: 10px;
-  margin: 100px;
-  margin-top: 90px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  margin-left: 70px;
   height: 600px;
-  margin-bottom: 150px;
   img{
     object-fit: fill;
     width: 100%;
-    // height: 100%;
   }
 
   .photo-display{
@@ -25,9 +22,9 @@
   }
 
   .photo-detail-container {
-    margin-top: 20px;
+    margin-top: 70px;
     display: border;
-    padding-left: 15px;
+    padding-left: 70px;
     font-size: 14px;
     border-left: 1px solid $lightgray;
   }
@@ -44,7 +41,7 @@
 
     .photo-det-UN *{
       margin-top: -45px;
-      margin-left: -90px;
+      margin-left: -200px;
       display: flex;
       text-decoration: none;
       padding-bottom: 15px;
@@ -54,13 +51,18 @@
       justify-content: center;
     }
 
+    .username-link {
+      color: $babyblue;
+    }
+    .username-link:hover {
+      color: blue;
+    }
+
   }
 
 
   .buttons{
     margin-bottom: 10px;
-
-
   }
 
   .follow-button *{
@@ -116,31 +118,29 @@
   .photo-details{
     color: $darkgray;
     position: relative;
-    top: 150px;
-
-    .section-title{
-      font-size: 30px;
-      font-weight: 700;
-    }
 
     .photo-title{
-      font-size: 36px;
-      padding-bottom: 25px;
+      font-size: 26px;
     }
 
     .photo-description{
-      font-size: 20px;
+      padding-top: 5px;
+      font-size: 14px;
       padding-bottom: 5px;
     }
     .photo-location{
       font-size: 14px;
-      padding-bottom: 5px;
     }
 
     .photo-date {
       font-size: 14px;
+      padding-bottom: 5px;
     }
 
+  }
+
+  .edit-form {
+    padding-top: 20px;
   }
 
   .edit-form label *{

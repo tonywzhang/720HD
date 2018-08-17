@@ -7,7 +7,7 @@ class EditPhotoForm extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = this.props.photo;
-    // debugger;
+
   }
 
   componentWillReceiveProps(nextProps){
@@ -63,7 +63,7 @@ class EditPhotoForm extends React.Component {
 
             <div className="photo-details">
               <form onSubmit={this.handleSubmit} className="edit-form">
-                <label>Title
+                <label >Title
                   <input
                     type="text"
                     value={this.state.title}

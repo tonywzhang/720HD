@@ -47,7 +47,9 @@
 }
 
 .searchbar_div{
-  position: relative;
+  position: fixed;
+  right: 200px;
+  top: 5px;
 
   span {
     float: left;
@@ -62,6 +64,9 @@
   li {
     list-style: none;
     text-decoration: none;
+    background-color: white;
+    padding-left: 10px;
+    padding-bottom: 10px;
   }
 }
 

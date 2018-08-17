@@ -12,8 +12,8 @@ class SessionForm extends React.Component {
       password: ''
     };
     this.demoUser = {
-      field: 'tony',
-      username: 'tony',
+      field: 'Tony',
+      username: 'Tony',
       email: 'tony@tony.com',
       password: 'password'
     };
@@ -155,6 +155,3 @@ render() {
 }
 
 export default withRouter(SessionForm);
-
-//  <input className="fb-submit" type="submit" value="Continue With Facebook" />
-//  <input className="goog-submit" type="submit" value="Continue With Google" />

@@ -8,30 +8,60 @@
 
 User.destroy_all;
 Photo.destroy_all;
+Like.destroy_all;
 
-user1 = User.create!(username: "guest", email: "guest@guest.com", password: "password")
-user2 = User.create!(username: "guest2", email: "guest1@guest.com", password: "password")
-tony = User.create!(username: "tony", email: "tony@tony.com", password: "password")
+#User Creation
+
+tony = User.create!(username: "Tony", email: "tony@tony.com", password: "password")
+
+user1 = User.create!(username: "Guest", email: "guest@guest.com", password: "password")
+
+user2 = User.create!(username: "GuestTwo", email: "guest1@guest.com", password: "password")
+
+user3 = User.create!(username: "Albert", email: "guest2@guest.com", password: "password")
+
+user4 = User.create!(username: "Bertha", email: "guest3@guest.com", password: "password")
+
+user5 = User.create!(username: "Calvin", email: "guest4@guest.com", password: "password")
+
+user6 = User.create!(username: "David", email: "guest5@guest.com", password: "password")
+
+user7 = User.create!(username: "Ernest", email: "guest6@guest.com", password: "password")
+
+user8 = User.create!(username: "Frank", email: "guest7@guest.com", password: "password")
+
+user9 = User.create!(username: "Greg", email: "guest8@guest.com", password: "password")
+
+user10 = User.create!(username: "Howard", email: "guest9@guest.com", password: "password")
+
+user11 = User.create!(username: "Isabelle", email: "guest10@guest.com", password: "password")
+
+user12 = User.create!(username: "Jordan", email: "guest11@guest.com", password: "password")
+
+user13 = User.create!(username: "Kevin", email: "guest12@guest.com", password: "password")
+
+user14 = User.create!(username: "Lucas", email: "guest13@guest.com", password: "password")
+user15 = User.create!(username: "Mary", email: "guest14@guest.com", password: "password")
+user16 = User.create!(username: "Naomi", email: "guest15@guest.com", password: "password")
+user17 = User.create!(username: "Olga", email: "guest16@guest.com", password: "password")
+user18 = User.create!(username: "Priya", email: "guest17@guest.com", password: "password")
+user19 = User.create!(username: "Quincy", email: "guest18@guest.com", password: "password")
+user20 = User.create!(username: "Roger", email: "guest19@guest.com", password: "password")
+user21 = User.create!(username: "Sally", email: "guest20@guest.com", password: "password")
+user23 = User.create!(username: "Ursula", email: "guest22@guest.com", password: "password")
+user24 = User.create!(username: "Victoria", email: "guest23@guest.com", password: "password")
+
+user25 = User.create!(username: "Wendy", email: "guest24@guest.com", password: "password")
+
+user26 = User.create!(username: "Xavier", email: "guest25@guest.com", password: "password")
+user27 = User.create!(username: "Yolanda", email: "guest26@guest.com", password: "password")
+
+user28 = User.create!(username: "Zeke", email: "guest27@guest.com", password: "password")
 
 
-file = File.open('app/assets/images/whistler.jpg')
-
-whistler = Photo.create!(author_id: user1.id, title: "Whistler National Park", description: "Winter Whistler", location: "Whistler, Canada")
-
-whistler.file.attach(io: file, filename: "whistler.jpg")
-
-file = File.open('app/assets/images/ny.jpg')
-
-ny = Photo.create!(author_id: user1.id, title: "New York", description: "Nightshot of NY", location: "New York")
-
-ny.file.attach(io: file, filename: "ny.jpg")
 
 
-file = File.open('app/assets/images/banff2.jpg')
-
-banff = Photo.create!(author_id: user1.id, title: "Banff National Park", description: "Winter in BNP", location: "Canadia")
-
-banff.file.attach(io: file, filename: "banff2.jpg")
+#AWS PHOTO CREATION
 
 
 file = File.open('app/assets/images/patagonia.jpg')
@@ -213,6 +243,12 @@ banff = Photo.create!(author_id: tony.id, title: "Banff National Park", descript
 
 banff.file.attach(io: file, filename: "banff3.jpg")
 
+file = File.open('app/assets/images/brothergrimmwanderings4.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Brothers Grimm Wanderings", description: "Photos by Kilian Schönberger.", location: "Europe")
+
+banff.file.attach(io: file, filename: "brothergrimmwanderings4.jpg")
+
 
 file = File.open('app/assets/images/zionnp1.jpg')
 
@@ -251,6 +287,11 @@ banff = Photo.create!(author_id: tony.id, title: "Oulanka National Park", descri
 
 banff.file.attach(io: file, filename: "oulankanp.jpg")
 
+file = File.open('app/assets/images/brothergrimmwanderings3.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Brothers Grimm Wanderings", description: "Photos by Kilian Schönberger.", location: "Europe")
+
+banff.file.attach(io: file, filename: "brothergrimmwanderings3.jpg")
 
 
 
@@ -273,6 +314,26 @@ file = File.open('app/assets/images/oulanka2.jpg')
 banff = Photo.create!(author_id: tony.id, title: "Oulanka National Park", description: "Oulanka National Park is a national park in the Northern Ostrobothnia and Lapland regions of Finland.", location: "Finland")
 
 banff.file.attach(io: file, filename: "oulanka2.jpg")
+
+file = File.open('app/assets/images/brothergrimmwanderings2.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Brothers Grimm Wanderings", description: "Photos by Kilian Schönberger.", location: "Europe")
+
+banff.file.attach(io: file, filename: "brothergrimmwanderings2.jpg")
+
+
+file = File.open('app/assets/images/moraylandscapeperu.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Moray Landscape", description: "Moray is an archaeological site in Peru approximately 50 kilometres (31 mi) northwest of Cuzco on a high plateau at about 3,500 metres (11,500 ft) and just west of the village of Maras.", location: "Peru")
+
+banff.file.attach(io: file, filename: "moraylandscapeperu.jpg")
+
+
+file = File.open('app/assets/images/bahiadeguila1.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Bahia de las Aguilas", description: "Bahia de las Aguilas is an 8 km long beach along the southwestern coast of the Dominican Republic.", location: "Dominican Republic")
+
+banff.file.attach(io: file, filename: "bahiadeguila1.jpg")
 
 
 file = File.open('app/assets/images/seoraksannp.jpg')
@@ -303,6 +364,22 @@ banff = Photo.create!(author_id: tony.id, title: "The House on a Hill", descript
 banff.file.attach(io: file, filename: "tuscanyitaly.jpg")
 
 
+file = File.open('app/assets/images/salinasaguadanr.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Salinas Aguada National Reserve", description: "Salinas y Aguada Blanca National Reserve is a protected area located in the regions of Arequipa and Moquegua; Peru.", location: "Peru")
+
+banff.file.attach(io: file, filename: "salinasaguadanr.jpg")
+
+
+file = File.open('app/assets/images/bahiadeguila.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Bahia de las Aguilas", description: "Bahia de las Aguilas is an 8 km long beach along the southwestern coast of the Dominican Republic.", location: "Dominican Republic")
+
+banff.file.attach(io: file, filename: "bahiadeguila.jpg")
+
+
+
+
 file = File.open('app/assets/images/hallstattaustria.jpg')
 
 banff = Photo.create!(author_id: tony.id, title: "The Floating Village", description: "Hallstatt is a village on Lake Hallstatt's western shore in Austria's mountainous Salzkammergut region.", location: "Hallstatt, Austria")
@@ -323,14 +400,186 @@ banff = Photo.create!(author_id: tony.id, title: "Oulanka National Park", descri
 
 banff.file.attach(io: file, filename: "oulanka1.jpg")
 
+file = File.open('app/assets/images/dr2.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Dominican Beach", description: "Views at the beach.", location: "Dominican Republic")
+
+banff.file.attach(io: file, filename: "dr2.jpg")
+
+
 file = File.open('app/assets/images/dv.jpg')
 
 banff = Photo.create!(author_id: tony.id, title: "Death Valley", description: "Death Valley is a desert valley located in Eastern California.", location: "Calfornia/Nevada")
 
 banff.file.attach(io: file, filename: "dv.jpg")
 
+file = File.open('app/assets/images/brothergrimmwanderings.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Brothers Grimm Wanderings", description: "Photos by Kilian Schönberger.", location: "Europe")
+
+banff.file.attach(io: file, filename: "brothergrimmwanderings.jpg")
+
+file = File.open('app/assets/images/perulandscape.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Peruvian Views", description: "Cusco, a city in the Peruvian Andes, was once capital of the Inca Empire, and is now known for its archaeological remains and Spanish colonial architecture.", location: "Peru")
+
+banff.file.attach(io: file, filename: "perulandscape.jpg")
+
+
+file = File.open('app/assets/images/dr1.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Dominican Beach", description: "Views at the beach.", location: "Dominican Republic")
+
+banff.file.attach(io: file, filename: "dr1.jpg")
+
+
+file = File.open('app/assets/images/scarttindenmountains.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Svarttinden Mountain Reflections", description: "Photo by Tom Mackie.", location: "Europe")
+
+banff.file.attach(io: file, filename: "scarttindenmountains.jpg")
+
+
+file = File.open('app/assets/images/emeraldlake.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Emerald Lake", description: "Photo by David Noton.", location: "Europe")
+
+banff.file.attach(io: file, filename: "emeraldlake.jpg")
+
+
+file = File.open('app/assets/images/antarctic.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Tide Coming In", description: "Photo by Hans Strand.", location: "Antarctica")
+
+banff.file.attach(io: file, filename: "antarctic.jpg")
+
+
+
+file = File.open('app/assets/images/karakorammountains.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Trango Towers", description: "Photo by Colin Prior.", location: "Pakistan")
+
+banff.file.attach(io: file, filename: "karakorammountains.jpg")
+
+
+file = File.open('app/assets/images/dr.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Dominican Waterfalls", description: "Waterfall.", location: "Dominican Republic")
+
+banff.file.attach(io: file, filename: "dr.jpg")
+
+file = File.open('app/assets/images/alsekpark.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Tatshenshini-Alsek Provincial Park", description: "Photo by Art Wolfe.", location: "British Columbia, Canada")
+
+banff.file.attach(io: file, filename: "alsekpark.jpg")
+
+file = File.open('app/assets/images/peru.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Peruvian Views", description: "Cusco, a city in the Peruvian Andes, was once capital of the Inca Empire, and is now known for its archaeological remains and Spanish colonial architecture.", location: "Peru")
+
+banff.file.attach(io: file, filename: "peru.jpg")
+
+
+file = File.open('app/assets/images/elcapitanstateparkheavenearth.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Heaven on Earth", description: "Photo by Marc Adamus.", location: "California")
+
+banff.file.attach(io: file, filename: "elcapitanstateparkheavenearth.jpg")
+
+
+file = File.open('app/assets/images/husfjelletmountain.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Midnight Sun", description: "Photo by Daniel Kordan.", location: "Norway")
+
+banff.file.attach(io: file, filename: "husfjelletmountain.jpg")
+
+
+file = File.open('app/assets/images/turimettabeach.jpg')
+
+banff = Photo.create!(author_id: tony.id, title: "Turimetta Beach", description: "Photo by Andrew Barnes.", location: "Sydney")
+
+banff.file.attach(io: file, filename: "turimettabeach.jpg")
+
+
+
+
+
+User.all.each do |user|
+  file = File.open('app/assets/images/yellowstone.jpg')
+
+  gs = Photo.create!(author_id: user.id, title: "Yellowstone National Park", description: "Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot.", location: "Wyoming, United States")
+
+  gs.file.attach(io: file, filename: "yellowstone.jpg")
+
+
+  file = File.open('app/assets/images/yellowstonenp.jpg')
+
+  gs = Photo.create!(author_id: user.id, title: "Yellowstone National Park", description: "Yellowstone National Park is a nearly 3,500-sq.-mile wilderness recreation area atop a volcanic hot spot.", location: "Wyoming, United States")
+
+  gs.file.attach(io: file, filename: "yellowstonenp.jpg")
+
+  file = File.open('app/assets/images/jasper.jpg')
+
+  jnp = Photo.create!(author_id: user.id, title: "Jasper National Park", description: "Paranoramic View of Jasper", location: "Jasper National Park, Canada")
+
+  jnp.file.attach(io: file, filename: "jasper.jpg")
+
+
+
+  file = File.open('app/assets/images/sunwapta-falls.jpg')
+
+  supwap = Photo.create!(author_id: user.id, title: "Sunwapta Falls", description: "Sunwapta Falls at Jasper National Park", location: "Jasper National Park, Canada")
+
+  supwap.file.attach(io: file, filename: "sunwapta-falls.jpg")
+
+
+
+  file = File.open('app/assets/images/banff1.jpg')
+
+  banff1 = Photo.create!(author_id: user.id, title: "Banff National Park", description: "Spring in Banff", location: "Banff National Park, Canada")
+
+  banff1.file.attach(io: file, filename: "banff1.jpg")
+
+
+  file = File.open('app/assets/images/oulankanp.jpg')
+
+  banff = Photo.create!(author_id: user.id, title: "Oulanka National Park", description: "Oulanka National Park is a national park in the Northern Ostrobothnia and Lapland regions of Finland.", location: "Finland")
+
+  banff.file.attach(io: file, filename: "oulankanp.jpg")
+end
+
+
+
+
+
+
 Photo.all.each do |photo|
   Like.create!(user_id: user1.id, photo_id: photo.id)
   Like.create!(user_id: user2.id, photo_id: photo.id)
-  Like.create!(user_id: tony.id, photo_id: photo.id)
+  Like.create!(user_id: user3.id, photo_id: photo.id)
+  Like.create!(user_id: user4.id, photo_id: photo.id)
+  Like.create!(user_id: user5.id, photo_id: photo.id)
+  Like.create!(user_id: user6.id, photo_id: photo.id)
+  Like.create!(user_id: user7.id, photo_id: photo.id)
+  Like.create!(user_id: user8.id, photo_id: photo.id)
+  Like.create!(user_id: user9.id, photo_id: photo.id)
+  Like.create!(user_id: user10.id, photo_id: photo.id)
+  Like.create!(user_id: user11.id, photo_id: photo.id)
+  Like.create!(user_id: user12.id, photo_id: photo.id)
+  Like.create!(user_id: user13.id, photo_id: photo.id)
+  Like.create!(user_id: user14.id, photo_id: photo.id)
+  Like.create!(user_id: user15.id, photo_id: photo.id)
+  Like.create!(user_id: user16.id, photo_id: photo.id)
+  Like.create!(user_id: user17.id, photo_id: photo.id)
+  Like.create!(user_id: user18.id, photo_id: photo.id)
+  Like.create!(user_id: user19.id, photo_id: photo.id)
+  Like.create!(user_id: user20.id, photo_id: photo.id)
+  Like.create!(user_id: user21.id, photo_id: photo.id)
+  Like.create!(user_id: user23.id, photo_id: photo.id)
+  Like.create!(user_id: user24.id, photo_id: photo.id)
+  Like.create!(user_id: user25.id, photo_id: photo.id)
+  Like.create!(user_id: user26.id, photo_id: photo.id)
+  Like.create!(user_id: user27.id, photo_id: photo.id)
+  Like.create!(user_id: user28.id, photo_id: photo.id)
 end

@@ -10,11 +10,11 @@
 
   .profile-header-pic{
     text-align: center;
-    background-image: image-url("banff2.jpg");
+    background-image: image-url("oulanka1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 300px;
     margin-bottom: 10px;
   }
 
@@ -46,12 +46,6 @@
     padding-bottom: 15px;
     font-size: 30px;
     color: $darkgray;
-  }
-
-  .user-description{
-    font-size: 14px;
-    color: $darkgray;
-    padding-bottom: 15px;
   }
 
   .user-details * {

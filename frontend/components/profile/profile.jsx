@@ -19,7 +19,6 @@ class Profile extends React.Component {
 
   render(){
     if(!this.props.user) return null;
-    // console.log(this.props);
 
     return (
       <div>
@@ -31,12 +30,13 @@ class Profile extends React.Component {
 
           <div className="username animated bounceIn">{this.props.user.username}</div>
 
-          <div className="user-description animated fadeIn">Lazy software-dev in-training, pretending to have in interest in photography</div>
-
           <div className="user-details animated fadeIn">
             <ul>
               <li>
                 27,815,349 Photo Views
+              </li>
+              <li>
+                {Object.values(this.props.photos).length} photos
               </li>
               <li>
                 2 Followers

@@ -8,7 +8,7 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/"}><img src={window.images.logo}></img></Link><a href="https://www.facebook.com/tonywzhang">Discover</a>
+          <Link to={"/"}><img src={window.images.logo}></img></Link><a href="https://www.facebook.com/tonywzhang">Feed</a>
           <a href="https://www.linkedin.com/in/tony-wzhang/">About</a>
         </div>
       </div>
@@ -27,14 +27,14 @@ const NavBar = ({ currentUser, logout }) => {
       <div className="navbar-1">
         <div className = "nav_float_left">
           <Link to={"/feed"}><img src={window.images.logo}></img></Link>
-          <Link to={"/feed"}>Discover</Link>
+          <Link to={"/feed"}>Feed</Link>
           <Link to={"/"}>...</Link>
         </div>
 
       </div>
       <div className = "nav_float_right">
 
-        <SearchContainer />
+          <SearchContainer />
 
         <div className="fa-icons">
           <Link to={`/profile/${currentUser.id}`} className="navLink">

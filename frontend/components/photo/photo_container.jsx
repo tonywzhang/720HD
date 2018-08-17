@@ -13,7 +13,7 @@ const calcLikes = (likes, photoId) => {
 };
 
 const currentUserLikes = (likes, photoId, currentUserId) => {
-  // debugger;
+  
   for (let i = 0; i < Object.values(likes).length; i++) {
     let like = Object.values(likes)[i];
     if (like.user_id === parseInt(currentUserId) && parseInt(photoId) === like.photo_id){
