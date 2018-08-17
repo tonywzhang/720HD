@@ -11,35 +11,3 @@ Rails.application.routes.draw do
   end
 
 end
-
-#
-
-# Photo show jbuilder
-# likes => like objs
-# likers => user objs
-
-
-#Build likes reducer
-# RECEIVE_PHOTO
-#PASSES UP ALL Likes
-#action.details.likes ALL LIKES
-
-#RECEIVE_LIKE #ACTIONS AS WELL
-#RECEIVE_DISLIKE
-
-#PHOTOSHOWCONTAINER
-# numLikes from details (selector that counts number of Like Objects with current photo.id)
-#currentUserLikes (boolean: true of false, if there a like that has photoId=currentPhotoId && userId===currentuser.Id)
-
-#if current UserLikes is true, handleLike
-# handleLike: () => dispatch(unLike(photoId))
-#else
-# handleLike: () => dispatch(like(photoId))
-
-# handleLike:
-
-#INTERPOLATE VALUES
-
-#ADD CLICK HANDLER
-#
-# this.props.handleLike(photoId)

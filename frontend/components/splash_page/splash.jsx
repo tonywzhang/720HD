@@ -89,7 +89,7 @@ const splash = () => {
               </a>
               <br/>
                 <a className="socials" href="https://github.com/tonywzhang/720HD">
-                  <i class="fab fa-github"></i>
+                  <i className="fab fa-github"></i>
                 </a>
             </div>
           </div>

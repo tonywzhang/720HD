@@ -1,24 +1,24 @@
-# README
+# Welcome to ![720 Logo](/app/assets/images/logo2.png "Logo Title Text 1")
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+720HD is a single page web-app clone of 500px.com as of August 2018. The site is a social network for photographers to connect, improve and share their best work.
 
-Things you may want to cover:
+[720HD Live Demo!](http://i720hd.herokuapp.com)
 
-* Ruby version
+![720 Logo](/app/assets/images/Splash1.png "Logo Title Text 1")
 
-* System dependencies
+## Design:
 
-* Configuration
+The 720HD app was designed and built from scratch in 10 days. The proposal was prepared to implement MVPs to get site functional. More details about proposal can be viewed [here](https://github.com/tonywzhang/720HD/wiki).
 
-* Database creation
+## Technologies Used:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    * Backend
+        This full stack project employs ruby on rails v 5.2.0 for implementing back-end.
+        Databases are managed by PostgreSQL.
+        The backend is implemented to provide RESTful APIs and handle and respond with JSON data.
+    * Front-end
+        The front end and UI are implemented using React/Redux and JavaScript.
+        Using react allows the state of the project to be normalized to reflect database and hence making the flow of one-page application smooth.
+        The back-end uses SQL queries for filtering data and front end uses VanillaDOM manipulation.
+        The webpage designing was done using css and scss and icons were used from fontawesome.com.
+        Babel was used for transpiling JSX into JavaScript.
