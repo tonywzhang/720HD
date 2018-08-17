@@ -19,7 +19,6 @@ class Photo extends React.Component {
   }
 
   updateLike (){
-    // debugger;
     if(this.props.currentUserLikes){
       return this.props.handleDislike(this.props.match.params.photoId);
     } else {

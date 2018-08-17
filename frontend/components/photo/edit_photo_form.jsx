@@ -6,7 +6,8 @@ class EditPhotoForm extends React.Component {
   constructor(props){
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = this.props.details;
+    this.state = this.props.photo;
+    // debugger;
   }
 
   componentWillReceiveProps(nextProps){
@@ -19,9 +20,9 @@ class EditPhotoForm extends React.Component {
     this.props.fetchPhoto(this.props.match.params.photoId)
       .then(({ photo}) => {
         this.setState({
-        location: photo.details.location,
-        description: photo.details.description,
-        title: photo.details.title
+        location: this.props.photo.location,
+        description: this.props.photo.description,
+        title: this.props.photo.title
       })});
 
   }
@@ -35,9 +36,9 @@ class EditPhotoForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const fields = this.state
-    const newPhotoObj = Object.assign({}, fields, { id: this.props.photoId}, {author_id: this.props.userId})
+    const newPhotoObj = Object.assign({}, fields, { id: this.props.photo.id}, {author_id: this.props.owner.id})
     console.warn(newPhotoObj)
-    this.props.updatePhoto(newPhotoObj).then(()=>this.props.history.push(`/profile/${this.props.userId}`));
+    this.props.updatePhoto(newPhotoObj).then(()=>this.props.history.push(`/profile/${this.props.owner.id}`));
   }
 
 
@@ -46,7 +47,7 @@ class EditPhotoForm extends React.Component {
       <div>
         <div className="photo-container">
           <div className="photo-display">
-            <img src={this.props.details.photoUrl}/>
+            <img src={this.props.photo.photoUrl}/>
           </div>
           <div className="photo-detail-container">
             <div className="profile-picture">
@@ -54,8 +55,8 @@ class EditPhotoForm extends React.Component {
             </div>
             <div className="photo-header-section">
               <div className="photo-det-UN">
-                <Link to={`/profile/${this.props.userId}`}>
-                  {this.props.details.username}
+                <Link to={`/profile/${this.props.owner.id}`}>
+                  {this.props.owner.username}
                 </Link>
               </div>
             </div>
@@ -92,9 +93,9 @@ class EditPhotoForm extends React.Component {
     };
 
     render(){
-
-      if(Object.values(this.props.details).length===0) return "Loading";
-
+      let owner = this.props.owner;
+      let photo = this.props.photo;
+      if(!photo || !owner) return <div>Loading</div>;
       return this.ownPhoto();
     }
   }

@@ -4,7 +4,6 @@ import { RECEIVE_LIKE, RECEIVE_DISLIKE, RECEIVE_PHOTO } from '../actions/session
 
 const likesReducer = (state = {}, action) => {
   Object.freeze(state);
-  //
   switch(action.type) {
     case RECEIVE_PHOTO:
       return Object.assign({}, action.payload.likes);

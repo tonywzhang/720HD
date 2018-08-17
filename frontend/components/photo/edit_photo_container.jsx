@@ -3,11 +3,15 @@ import { fetchPhoto, updatePhoto } from '../../actions/session_actions';
 import EditPhotoForm from './edit_photo_form';
 
 const mapStateToProps = (state, ownProps) => {
+  let photo = state.entities.photos[ownProps.match.params.photoId];
+  let owner;
+  if (photo){
+    owner = state.entities.users[photo.author_id];
+  }
   return {
     currentUser: state.entities.users[state.session.id],
-    userId: ownProps.match.params.id,
-    details: state.entities.photos,
-    photoId: ownProps.match.params.photoId
+    photo,
+    owner
   };
 };
 
