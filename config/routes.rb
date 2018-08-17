@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :api,defaults: {format: :json} do
     resources :users, only: [:create, :show, :index]
     resources :photos, only: [:create, :show, :update, :index, :destroy]
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy, :show]
     resources :follows, only: [:create, :destroy]
     resource :session, only: [:create, :destroy, :show]
   end
@@ -29,7 +29,7 @@ end
 
 #PHOTOSHOWCONTAINER
 # numLikes from details (selector that counts number of Like Objects with current photo.id)
-#currentUserLikes (boolean: true of false, is there a like that has photoId=currentPhotoId && userId===currentuser.Id)
+#currentUserLikes (boolean: true of false, if there a like that has photoId=currentPhotoId && userId===currentuser.Id)
 
 #if current UserLikes is true, handleLike
 # handleLike: () => dispatch(unLike(photoId))

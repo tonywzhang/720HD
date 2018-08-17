@@ -8,6 +8,8 @@ export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
 export const RECEIVE_USER = "RECEIVE_USER";
 export const RECEIVE_PHOTO = "RECEIVE_PHOTO";
 export const REMOVE_PHOTO = "REMOVE_PHOTO";
+export const RECEIVE_LIKE = "RECEIVE_LIKE";
+export const RECEIVE_DISLIKE = "RECEIVE_DISLIKE";
 
 export const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -37,15 +39,35 @@ export const receiveUser = (payload) => ({
   payload
 });
 
-export const receivePhoto = photo => ({
+export const receivePhoto = payload => ({
   type: RECEIVE_PHOTO,
-  photo
+  payload
 });
 
 const removePhoto = photoId => ({
   type: REMOVE_PHOTO,
   photoId
 });
+
+export const receiveLike = like => ({
+  type: RECEIVE_LIKE,
+  like
+});
+
+export const removeLike = like => ({
+  type: RECEIVE_DISLIKE,
+  like
+});
+
+
+export const like = photoId => dispatch => (
+  APIUtil.like(photoId).then(like => dispatch(receiveLike(like)))
+);
+
+export const unlike = photoId => dispatch => (
+  APIUtil.unlike(photoId).then(like => dispatch(removeLike(like)))
+);
+
 
 export const signup = user => dispatch => (
   APIUtil.signup(user).then(user => (
@@ -82,7 +104,7 @@ export const fetchPhoto = photo => dispatch => (
 );
 
 export const updatePhoto = photo => dispatch => (
-  APIUtil.updatePhoto(photo).then(photo => dispatch(receivePhoto(photo)))
+  APIUtil.updatePhoto(photo).then(payload => dispatch(receivePhoto(payload)))
 );
 
 export const deletePhoto = photoId => dispatch => (

@@ -56,3 +56,18 @@ export const deletePhoto = photoId => (
     url: `/api/photos/${photoId}`
   })
 );
+
+export const like = photoId => (
+  $.ajax({
+      method: "POST",
+      url: `/api/likes/`,
+      data: { photoId }
+  })
+);
+
+export const unlike = photoId => (
+  $.ajax({
+      method: "DELETE",
+      url: `/api/likes/${photoId}`
+  })
+);

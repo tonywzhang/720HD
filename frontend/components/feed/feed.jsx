@@ -19,7 +19,7 @@ class Feed extends React.Component {
 
   render(){
     // if(!this.props.user) return null;
-    // debugger;
+    // 
 
     return (
       <div className="feed">
