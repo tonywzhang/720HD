@@ -18,9 +18,6 @@ class Feed extends React.Component {
   }
 
   render(){
-    // if(!this.props.user) return null;
-    // 
-
     return (
       <div className="feed">
         <div className="feed-container">
@@ -43,12 +40,6 @@ class Feed extends React.Component {
       </div>
     );
   }
-
 }
 
 export default withRouter(Feed);
-
-
-
-// <Link className="profile-link" to={`/profile/${photo.author_id}`}>{photo.author}</Link>
-// <br/>
