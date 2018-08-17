@@ -20,19 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore();
   }
-  // TESTING START
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchUser = fetchUser;
-  // TESTING END
-
-  window.fetchUsers = fetchUsers;
-
-  // TESTING START
-  window.login = login;
-  window.signup = signup;
-  window.logout = logout;
-  // TESTING END
 
   ReactDOM.render(<Root store={store}/>, root);
 });
