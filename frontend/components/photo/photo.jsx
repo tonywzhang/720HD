@@ -43,7 +43,9 @@ class Photo extends React.Component {
           <div className="photo-detail-container">
             <div className="top-section">
             <div className="profile-picture">
-              <img src={window.images.guest}></img>
+              <Link to={`/profile/${this.props.owner.id}`}>
+                <img src={window.images.guest}></img>
+              </Link>
             </div>
             <div className="photo-header-section">
               <div className="photo-det-UN">
@@ -111,7 +113,9 @@ class Photo extends React.Component {
           <div className="photo-detail-container">
             <div className="top-section">
             <div className="profile-picture">
-              <img src={window.images.guest}></img>
+              <Link to={`/profile/${this.props.owner.id}`}>
+                <img src={window.images.guest}></img>
+              </Link>
             </div>
             <div className="photo-header-section">
               <div className="photo-det-UN">
