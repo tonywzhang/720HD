@@ -81,8 +81,6 @@ class Photo extends React.Component {
               </div>
             </div>
             <br/>
-            <br/>
-            <br/>
 
               <div className="photo-location">
                 <iframe
