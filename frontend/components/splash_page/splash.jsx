@@ -91,6 +91,10 @@ const splash = () => {
                 <a className="socials" href="https://github.com/tonywzhang/720HD">
                   <i className="fab fa-github"></i>
                 </a>
+              <br/>
+                <a className="socials" href="https://tonyzhang.netlify.com/">
+                  <i className="fas fa-user-tie"></i>
+                </a>
             </div>
           </div>
         </div>

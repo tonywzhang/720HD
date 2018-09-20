@@ -1,0 +1,36 @@
+@import "constants";
+
+.upload-form{
+  display: grid;
+  background-color: white;
+  grid-template-columns: minmax(250px, 1fr);
+  height: 80vh;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 80px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 4%;
+  padding-left: 150px;
+  padding-right: 150px;
+
+  .upload_title {
+    font-size: 24px;
+  }
+
+  .preview {
+    img {
+      align-items: center;
+      width: 350px;
+      height: 250px;
+    }
+  }
+
+  .choose_file{
+    background-color: $babyblue;
+    color: white;
+  }
+}

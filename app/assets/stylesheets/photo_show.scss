@@ -1,18 +1,24 @@
 @import "constants";
 
+.photo-full{
+  background-color: #DCDCDC;
+  height: 100%;
+}
+
 .photo-container{
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  position: sticky;
   display: grid;
-  background-color: white;
-  grid-template-columns: minmax(250px, 3fr) minmax(250px, 1.5fr);
+  grid-template-columns: minmax(250px, 2fr) minmax(250px, 1fr);
   grid-column-gap: 100px;
   margin-top: 70px;
-  margin-bottom: 50px;
   margin-left: 70px;
-  height: 600px;
+  height: 650px;
+
   img{
-    object-fit: fill;
+    object-fit: stretch;
     width: 100%;
+    height: 90%;
   }
 
   .photo-display{
@@ -22,44 +28,42 @@
   }
 
   .photo-detail-container {
-    margin-top: 70px;
     display: border;
-    padding-left: 70px;
+    display: block;
+    padding-left: 10px;
+    padding-top: 30px;
     font-size: 14px;
     border-left: 1px solid $lightgray;
-  }
 
-  .photo-detail-container{
-    display: block;
-
-    .profile-picture{
-      img {
-        height: 50px;
-        width: 50px;
-      }
-    }
-
-    .photo-det-UN *{
-      margin-top: -45px;
-      margin-left: -200px;
+    .top-section{
       display: flex;
-      text-decoration: none;
-      padding-bottom: 15px;
-      color: $darkgray;
-      font-size: 18px;
-      text-align: center;
-      justify-content: center;
-    }
 
-    .username-link {
-      color: $babyblue;
-    }
-    .username-link:hover {
-      color: blue;
-    }
+      .photo-det-UN *{
+        padding-bottom: 15px;
+        color: $darkgray;
+        font-size: 18px;
+        text-align: center;
+        justify-content: center;
+      }
 
+      .username-link {
+        color: $babyblue;
+        text-decoration: none;
+        position: relative;
+        top: 15px;
+        left: 3px;
+      }
+      .username-link:hover {
+        color: blue;
+      }
+      .profile-picture{
+        img {
+          height: 50px;
+          width: 50px;
+        }
+    }
   }
-
+  }
 
   .buttons{
     margin-bottom: 10px;
@@ -71,6 +75,7 @@
     color: $babyblue;
     border-color: $babyblue;
     border-radius: 5px;
+    cursor: no-drop;
   }
 
   .like-button *{
@@ -108,7 +113,7 @@
   }
 
   .photo-buttons *{
-    margin-top: 30px;
+    margin-top: 10px;
     background-color: white;
     color: $babyblue;
     border-color: $babyblue;
@@ -117,24 +122,26 @@
 
   .photo-details{
     color: $darkgray;
-    position: relative;
 
-    .photo-title{
-      font-size: 26px;
-    }
+    .text-details{
+      display: flex;
+      .photo-title{
+        font-size: 14px;
+        display: none;
+      }
 
-    .photo-description{
-      padding-top: 5px;
-      font-size: 14px;
-      padding-bottom: 5px;
-    }
-    .photo-location{
-      font-size: 14px;
-    }
+      .photo-description{
+        font-size: 14px;
+      }
+      .photo-location{
+        margin-top: 10px;
+        font-size: 14px;
+      }
 
-    .photo-date {
-      font-size: 14px;
-      padding-bottom: 5px;
+      .photo-date {
+        font-size: 14px;
+        padding-left: 5px;
+      }
     }
 
   }

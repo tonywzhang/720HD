@@ -8,8 +8,14 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/"}><img src={window.images.logo}></img></Link><a href="https://www.facebook.com/tonywzhang">Feed</a>
-          <a href="https://www.linkedin.com/in/tony-wzhang/">About</a>
+          <a href="/"><img src={window.images.logo}></img></a>
+          <div className = "left_links">
+            <ul>
+              <a href="#">Discover</a>
+              <a href="#">About</a>
+              <a href="#">Licensing</a>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -26,15 +32,19 @@ const NavBar = ({ currentUser, logout }) => {
     <div className="splash-navbar">
       <div className="navbar-1">
         <div className = "nav_float_left">
-          <Link to={"/feed"}><img src={window.images.logo}></img></Link>
-          <Link to={"/feed"}>Feed</Link>
-          <Link to={"/"}>...</Link>
+          <a href="/#/feed"><img src={window.images.logo}></img></a>
+          <div className = "left_links">
+            <ul>
+              <a href="#">Discover</a>
+              <a href="#">...</a>
+            </ul>
+          </div>
         </div>
 
       </div>
       <div className = "nav_float_right">
 
-          <SearchContainer />
+        <SearchContainer />
 
         <div className="fa-icons">
           <Link to={`/profile/${currentUser.id}`} className="navLink">

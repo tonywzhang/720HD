@@ -12,6 +12,7 @@
   border-bottom: 1px solid $hexgray;
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
   z-index: 2;
+  // overflow: hidden;
 
   * {
     text-decoration: none;
@@ -26,17 +27,33 @@
   }
 }
 
-.nav_float_left *{
-  display: inline-flex;
+.nav_float_left {
+  display: flex;
   text-decoration: none;
   color: $babyblue;
   margin-left: 30px;
-  margin-top: 25px;
   font-size: 14px;
+  justify-content: space-between;
 
   img {
     height: 21px;
-    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .left_links {
+    padding-top: 10px;
+    text-decoration: none;
+    margin-left: -40px;
+
+    a {
+      color: $babyblue;
+      font-size: 14px;
+      padding-left: 18px;
+    }
+
+    a:hover {
+      cursor: no-drop;
+    }
   }
 }
 

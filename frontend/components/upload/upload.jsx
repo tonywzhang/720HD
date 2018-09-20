@@ -1,7 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
 
-export default class Form extends React.Component {
+const styles = theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: 200,
+  },
+  menu: {
+    width: 200,
+  },
+});
+
+class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,40 +75,43 @@ export default class Form extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     const preview = this.state.photoUrl ? <img src={this.state.photoUrl} /> : null;
+
     return (
       <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
-        <label htmlFor="post-title">Title</label>
-        <br/>
-        <input type="text"
+        <label className="upload_title">Upload Form</label>
+
+
+        <TextField type="text"
           id="post-title"
+          label="Title"
           value={this.state.title}
-          onChange={this.handleInput("title")}/>
-        <br/>
-        <br/>
-          <label htmlFor="post-desc">Description</label>
-          <br/>
-          <input type="text"
+          onChange={this.handleInput("title")}
+          placeholder="Title"/>
+
+          <TextField type="text"
             id="post-desc"
             value={this.state.description}
-            onChange={this.handleInput("description")}/>
-          <br/>
-          <br/>
-            <label htmlFor="post-loc">Location</label>
-            <br/>
-            <input type="text"
+            onChange={this.handleInput("description")}
+            placeholder="Description"
+            label="Description"/>
+
+            <TextField type="text"
               id="post-loc"
               value={this.state.location}
-              onChange={this.handleInput("location")}/>
-            <br/>
-            <br/>
+              onChange={this.handleInput("location")}
+              placeholder="Location"
+              label="Location"/>
+
         <input type="file"
-          onChange={this.handleFile.bind(this)}/>
+          onChange={this.handleFile.bind(this)}
+          className="choose_file"/>
         <h3>Image preview </h3>
+        <input type="submit" value="Upload Photo" className="choose_file"/>
         <div className="preview">{preview}</div>
-        <input type="submit" value="Upload Photo"/>
       </form>
     );
   }
 }
+
+export default withStyles(styles)(Form);

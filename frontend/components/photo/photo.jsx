@@ -41,6 +41,7 @@ class Photo extends React.Component {
           </div>
 
           <div className="photo-detail-container">
+            <div className="top-section">
             <div className="profile-picture">
               <img src={window.images.guest}></img>
             </div>
@@ -51,6 +52,7 @@ class Photo extends React.Component {
                 </Link>
               </div>
             </div>
+          </div>
 
             <div className="buttons">
               <div className="follow-button">
@@ -64,6 +66,7 @@ class Photo extends React.Component {
 
             <div className="photo-details animated bounceIn">
 
+              <div className="text-details">
               <div className="photo-title">
                 {this.props.photo.title}
               </div>
@@ -74,9 +77,10 @@ class Photo extends React.Component {
 
 
               <div className="photo-date">
-                Uploaded on {new Date(this.props.photo.created_at).toString().split(" ").slice(1,4).join(" ")}
+                | Uploaded on {new Date(this.props.photo.created_at).toString().split(" ").slice(1,4).join(" ")}
               </div>
-
+            </div>
+            <br/>
               <div className="photo-location">
                 <iframe
                   width="300"
@@ -95,14 +99,16 @@ class Photo extends React.Component {
   };
 
   ownPhoto(){
-    // debugger;
     return (
-      <div>
+      <div className="photo-full">
         <div className="photo-container">
+
           <div className="photo-display">
             <img src={this.props.photo.photoUrl}/>
           </div>
+
           <div className="photo-detail-container">
+            <div className="top-section">
             <div className="profile-picture">
               <img src={window.images.guest}></img>
             </div>
@@ -113,6 +119,7 @@ class Photo extends React.Component {
                 </Link>
               </div>
             </div>
+          </div>
             <div className="photo-buttons">
               <Link className="edit" to={`/profile/${this.props.owner.id}/photos/${this.props.photo.id}/edit`}>Edit</Link>
               <br/>
@@ -137,7 +144,7 @@ class Photo extends React.Component {
                 <div className="photo-date">
                   Uploaded on {new Date(this.props.photo.created_at).toString().split(" ").slice(1,4).join(" ")}
                 </div>
-
+                <br/>
                 <div className="photo-location">
                   <iframe
                     width="300"
