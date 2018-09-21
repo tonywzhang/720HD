@@ -33,9 +33,6 @@ class Profile extends React.Component {
           <div className="user-details animated fadeIn">
             <ul>
               <li>
-                27,815,349 Photo Views
-              </li>
-              <li>
                 {Object.values(this.props.photos).length} photos
               </li>
               <li>

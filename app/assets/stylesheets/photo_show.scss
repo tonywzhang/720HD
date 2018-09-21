@@ -10,15 +10,15 @@
   position: sticky;
   display: grid;
   grid-template-columns: minmax(250px, 2fr) minmax(250px, 1fr);
-  grid-column-gap: 100px;
+  grid-column-gap: 70px;
   margin-top: 70px;
   margin-left: 70px;
-  height: 650px;
+  height: 100vh;
 
   img{
-    object-fit: stretch;
+    // object-fit: stretch;
     width: 100%;
-    height: 90%;
+    height: 80%;
   }
 
   .photo-display{
@@ -84,7 +84,7 @@
     color: white;
     border-radius: 15px;
     border: 1px solid $babyblue;
-    font-size: 20px;
+    font-size: 14px;
     height: 30px;
     line-height: 26px;
     width: 100px;
